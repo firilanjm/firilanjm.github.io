@@ -14,7 +14,7 @@ body {
 /* SIDEBAR */
 .sidebar {
     width: 250px;
-    background-color: #3b82f6; /* bright but soft blue */
+    background-color: #fad9eb; /* bright but soft blue */
     color: white;
     padding: 20px;
     display: flex;
@@ -25,7 +25,7 @@ body {
 .profile-photo img {
     width: 150px;
     border-radius: 50%;
-    border: 3px solid #f9a8d4; /* soft pink border */
+    border: 3px solid #fad9eb; /* soft pink border */
 }
 
 .profile-photo h2 {
