@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #fff5f7; /* soft blush */
+    background-color: #f0f4f8; /* soft light blue */
     color: #333;
 }
 
@@ -14,7 +14,7 @@ body {
 /* SIDEBAR */
 .sidebar {
     width: 250px;
-    background-color: #b91c1c;
+    background-color: #3b82f6; /* bright but soft blue */
     color: white;
     padding: 20px;
     display: flex;
@@ -25,7 +25,7 @@ body {
 .profile-photo img {
     width: 150px;
     border-radius: 50%;
-    border: 3px solid #ec4899;
+    border: 3px solid #f9a8d4; /* soft pink border */
 }
 
 .profile-photo h2 {
@@ -50,13 +50,13 @@ body {
 }
 
 .sidebar-nav a {
-    color: #fff5f7;
+    color: #dbeafe; /* very light blue */
     text-decoration: none;
     font-weight: bold;
 }
 
 .sidebar-nav a:hover {
-    color: #fce7f3;
+    color: #f9a8d4; /* pink highlight on hover */
 }
 
 /* MAIN CONTENT */
@@ -67,9 +67,9 @@ body {
 }
 
 h2 {
-    border-bottom: 2px solid #fbcfe8;
+    border-bottom: 2px solid #f9a8d4; /* soft pink underline */
     padding-bottom: 10px;
-    color: #b91c1c;
+    color: #3b82f6; /* match sidebar blue */
     margin-top: 40px;
 }
 
@@ -78,17 +78,17 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(185, 28, 28, 0.1);
+    box-shadow: 0px 4px 15px rgba(59, 130, 246, 0.1); /* subtle blue shadow */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 section:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 8px 20px rgba(185, 28, 28, 0.2);
+    box-shadow: 0px 8px 20px rgba(59, 130, 246, 0.2);
 }
 
 a {
-    color: #ec4899;
+    color: #f472b6; /* pink links */
     text-decoration: none;
     font-weight: bold;
 }
@@ -100,7 +100,7 @@ a:hover {
 .output {
     display: block;
     margin-top: 5px;
-    color: #9d174d;
+    color: #ec4899; /* slightly darker pink for subtext */
     font-size: 0.9rem;
 }
 
@@ -108,7 +108,12 @@ a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #fce7f3;
-    color: #b91c1c;
+    background-color: #dbeafe; /* very soft blue */
+    color: #3b82f6; /* sidebar blue for consistency */
     margin-top: 40px;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
 }
