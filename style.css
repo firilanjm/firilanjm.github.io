@@ -1,39 +1,94 @@
+/* BODY + LAYOUT */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #fff5f7; /* soft blush background */
+    background-color: #fff5f7; /* soft blush */
     color: #333;
 }
 
-header {
-    background-color: #b91c1c; /* deep muted pink/red */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background-color: #b91c1c;
     color: white;
-    padding: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid #ec4899;
+}
+
+.profile-photo h2 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.profile-photo p {
+    font-size: 0.9rem;
     text-align: center;
 }
 
-section {
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    color: #fff5f7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar-nav a:hover {
+    color: #fce7f3;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
     padding: 40px;
-    max-width: 800px;
-    margin: auto;
+    max-width: 900px;
 }
 
 h2 {
-    border-bottom: 2px solid #fbcfe8; /* soft pink underline */
+    border-bottom: 2px solid #fbcfe8;
     padding-bottom: 10px;
-    color: #b91c1c; /* match header accent */
+    color: #b91c1c;
+    margin-top: 40px;
 }
 
-.project {
+section {
     background: #ffffff;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(185, 28, 28, 0.1); /* subtle pink shadow */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(185, 28, 28, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 20px rgba(185, 28, 28, 0.2);
 }
 
 a {
-    color: #ec4899; /* bright but professional pink */
+    color: #ec4899;
     text-decoration: none;
     font-weight: bold;
 }
@@ -42,9 +97,18 @@ a:hover {
     text-decoration: underline;
 }
 
+.output {
+    display: block;
+    margin-top: 5px;
+    color: #9d174d;
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #fce7f3; /* very soft pink */
+    background-color: #fce7f3;
     color: #b91c1c;
+    margin-top: 40px;
 }
