@@ -69,7 +69,7 @@ body {
 h2 {
     border-bottom: 2px solid #f9a8d4; /* soft pink underline */
     padding-bottom: 10px;
-    color: #0f1d4c; /* dark blue headings */
+    color: #103775; /* dark blue headings */
     margin-top: 40px;
 }
 
@@ -109,7 +109,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #cbd6f5; /* light blue footer */
-    color: #0f1d4c; /* dark blue for consistency */
+    color: #103775; /* dark blue for consistency */
     margin-top: 40px;
 }
 
