@@ -69,7 +69,7 @@ body {
 h2 {
     border-bottom: 2px solid #f9a8d4; /* soft pink underline */
     padding-bottom: 10px;
-    color: #3b82f6; /* headings match sidebar blue */
+    color: #103775; /* headings match sidebar blue */
     margin-top: 40px;
 }
 
@@ -109,7 +109,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #dbeafe; /* soft light blue footer */
-    color: #a4c6fc; /* sidebar blue for consistency */
+    color: #103775; /* sidebar blue for consistency */
     margin-top: 40px;
 }
 
