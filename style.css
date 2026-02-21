@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f0f4f8; /* soft light blue background */
+    background-color: #e5e9f2; /* very light blue background */
     color: #333;
 }
 
@@ -14,7 +14,7 @@ body {
 /* SIDEBAR */
 .sidebar {
     width: 250px;
-    background-color: #bed5fa; /* soft blue sidebar */
+    background-color: #0f1d4c; /* dark navy blue sidebar */
     color: #ffffff;
     padding: 20px;
     display: flex;
@@ -50,7 +50,7 @@ body {
 }
 
 .sidebar-nav a {
-    color: #f7f8fa; /* very light blue for sidebar links */
+    color: #cbd6f5; /* light blue for sidebar links */
     text-decoration: none;
     font-weight: bold;
 }
@@ -69,7 +69,7 @@ body {
 h2 {
     border-bottom: 2px solid #f9a8d4; /* soft pink underline */
     padding-bottom: 10px;
-    color: #103775; /* headings match sidebar blue */
+    color: #0f1d4c; /* dark blue headings */
     margin-top: 40px;
 }
 
@@ -78,13 +78,13 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(59, 130, 246, 0.1); /* subtle blue shadow */
+    box-shadow: 0px 4px 15px rgba(15, 29, 76, 0.1); /* subtle dark blue shadow */
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 section:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 8px 20px rgba(59, 130, 246, 0.2);
+    box-shadow: 0px 8px 20px rgba(15, 29, 76, 0.2);
 }
 
 a {
@@ -108,8 +108,8 @@ a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #dbeafe; /* soft light blue footer */
-    color: #103775; /* sidebar blue for consistency */
+    background-color: #cbd6f5; /* light blue footer */
+    color: #0f1d4c; /* dark blue for consistency */
     margin-top: 40px;
 }
 
