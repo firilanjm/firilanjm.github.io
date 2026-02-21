@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupyter Notebook — generated with runcell</title>
+    <meta name="description" content="Exported with runcell — convert .ipynb notebooks to HTML or PDF anytime at runcell.dev." />
+    <meta name="generator" content="runcell" />
+    <style>
+        :root {
+            --jp-code-font-family: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+            --jp-content-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            --jp-cell-prompt-width: 64px;
+            --jp-input-prompt-color: #307fc1;
+            --jp-output-prompt-color: #bf5b3d;
+            --jp-cell-input-bg: #f7f7f7;
+            --jp-layout-color0: #ffffff;
+            --jp-layout-color1: #f7f7f7;
+            --jp-border-color1: #e0e0e0;
+            --jp-content-font-color0: #000000;
+            --jp-content-font-color1: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--jp-content-font-family);
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--jp-content-font-color0);
+            background-color: var(--jp-layout-color0);
+            margin: 0;
+            padding: 0;
+        }
+
+        .notebook-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cell structure */
+        .cell {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .cell-prompt {
+            min-width: var(--jp-cell-prompt-width);
+            width: var(--jp-cell-prompt-width);
+            font-family: var(--jp-code-font-family);
+            font-size: 12px;
+            padding: 10px 8px 10px 0;
+            text-align: right;
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        .cell-content {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        /* Input prompt styling - Jupyter blue */
+        .input-prompt {
+            color: var(--jp-input-prompt-color);
+            font-weight: bold;
+        }
+
+        /* Output prompt styling - Jupyter red/orange */
+        .output-prompt {
+            color: var(--jp-output-prompt-color);
+            font-weight: bold;
+        }
+
+        /* Code cell input area */
+        .input-area {
+            background-color: var(--jp-cell-input-bg);
+            border: 1px solid var(--jp-border-color1);
+            border-radius: 2px;
+            padding: 8px 12px;
+            overflow-x: auto;
+        }
+
+        .input-area pre {
+            margin: 0;
+            font-family: var(--jp-code-font-family);
+            font-size: 13px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Output area */
+        .output-area {
+            margin-top: 0;
+        }
+
+        .output-wrapper {
+            display: flex;
+            flex-direction: row;
+            margin-top: 4px;
+        }
+
+        .output-content {
+            flex: 1;
+            min-width: 0;
+            padding: 8px 0;
+        }
+
+        .output-content pre {
+            margin: 0;
+            font-family: var(--jp-code-font-family);
+            font-size: 13px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Stream output (stdout/stderr) */
+        .output-stream {
+            font-family: var(--jp-code-font-family);
+            font-size: 13px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .output-stderr {
+            background-color: #fdd;
+            padding: 8px 12px;
+            border-radius: 2px;
+        }
+
+        /* Execute result / display data */
+        .output-result {
+            padding: 4px 0;
+        }
+
+        .output-result pre {
+            margin: 0;
+            font-family: var(--jp-code-font-family);
+            font-size: 13px;
+        }
+
+        /* Image output */
+        .output-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* HTML output (DataFrames, etc.) */
+        .output-html {
+            overflow-x: auto;
+        }
+
+        .output-html table {
+            border-collapse: collapse;
+            font-size: 13px;
+            font-family: var(--jp-content-font-family);
+        }
+
+        .output-html table th,
+        .output-html table td {
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            text-align: left;
+        }
+
+        .output-html table th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+
+        .output-html table tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        /* Error output */
+        .output-error {
+            background-color: #fff0f0;
+            padding: 8px 12px;
+            border-radius: 2px;
+            font-family: var(--jp-code-font-family);
+            font-size: 13px;
+            white-space: pre-wrap;
+        }
+
+        /* Markdown cell styling */
+        .markdown-cell {
+            padding: 10px 0;
+        }
+
+        .markdown-cell h1 {
+            font-size: 2em;
+            font-weight: 600;
+            margin: 0.67em 0;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid var(--jp-border-color1);
+        }
+
+        .markdown-cell h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 0.83em 0;
+            padding-bottom: 0.3em;
+            border-bottom: 1px solid var(--jp-border-color1);
+        }
+
+        .markdown-cell h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin: 1em 0;
+        }
+
+        .markdown-cell h4 {
+            font-size: 1em;
+            font-weight: 600;
+            margin: 1.33em 0;
+        }
+
+        .markdown-cell h5 {
+            font-size: 0.875em;
+            font-weight: 600;
+            margin: 1.67em 0;
+        }
+
+        .markdown-cell h6 {
+            font-size: 0.85em;
+            font-weight: 600;
+            margin: 2.33em 0;
+            color: #6a737d;
+        }
+
+        .markdown-cell p {
+            margin: 0 0 16px 0;
+            line-height: 1.6;
+        }
+
+        .markdown-cell code {
+            font-family: var(--jp-code-font-family);
+            font-size: 85%;
+            background-color: rgba(27, 31, 35, 0.05);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+        }
+
+        .markdown-cell pre {
+            background-color: var(--jp-cell-input-bg);
+            border: 1px solid var(--jp-border-color1);
+            border-radius: 3px;
+            padding: 16px;
+            overflow-x: auto;
+            font-size: 85%;
+            line-height: 1.45;
+        }
+
+        .markdown-cell pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: 100%;
+        }
+
+        .markdown-cell blockquote {
+            margin: 0 0 16px 0;
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 4px solid #dfe2e5;
+        }
+
+        .markdown-cell ul,
+        .markdown-cell ol {
+            margin: 0 0 16px 0;
+            padding-left: 2em;
+        }
+
+        .markdown-cell li {
+            margin: 0.25em 0;
+        }
+
+        .markdown-cell a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .markdown-cell a:hover {
+            text-decoration: underline;
+        }
+
+        .markdown-cell hr {
+            border: 0;
+            border-top: 1px solid var(--jp-border-color1);
+            margin: 24px 0;
+        }
+
+        .markdown-cell img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .markdown-cell table {
+            border-collapse: collapse;
+            margin: 0 0 16px 0;
+        }
+
+        .markdown-cell table th,
+        .markdown-cell table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+
+        .markdown-cell table th {
+            font-weight: 600;
+            background-color: #f6f8fa;
+        }
+
+        .markdown-cell table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+
+        /* Raw cell styling */
+        .raw-cell {
+            background-color: var(--jp-layout-color1);
+            border: 1px solid var(--jp-border-color1);
+            border-radius: 2px;
+            padding: 8px 12px;
+            font-family: var(--jp-code-font-family);
+            font-size: 13px;
+            white-space: pre-wrap;
+        }
+
+        /* Empty prompt placeholder */
+        .prompt-empty {
+            color: transparent;
+        }
+
+        .export-footer {
+            margin-top: 32px;
+            padding-top: 16px;
+            border-top: 1px solid var(--jp-border-color1);
+            color: #555;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .export-footer a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .export-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="notebook-container">
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell"><h1>E-Commerce Analysis Project</h1><br>This project demonstrates an end-to-end data analytics workflow for analyzing e-commerce transactions. The analysis aims to support business decision-making by identifying top-selling products, understanding monthly revenue trends, and uncovering customer purchasing patterns.<br><br>The dataset consists of approximately 250,000 UK-based online retail transactions. Each record contains the following eight attributes:<br>- InvoiceNo<br>- StockCode<br>- Description<br>- Quantity<br>- InvoiceDate<br>- UnitPrice<br>- CustomerID<br>- Country<br></div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell"><h2>Data Cleaning</h2></div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [3]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre>import pandas as pd</pre></div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [4]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre>df = pd.read_csv("uk_ecommerce.csv", encoding='ISO-8859-1')
+
+# Initial exploration
+print(df.head())
+print(df.info())
+print(df.isnull().sum())</pre></div>
+                <div class="output-area">
+                    <div class="output-wrapper">
+                        <div class="cell-prompt output-prompt"></div>
+                        <div class="output-content">
+                            <div class="output-stream">  InvoiceNo StockCode                          Description  Quantity  \
+0    536365    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6   
+1    536365     71053                  WHITE METAL LANTERN         6   
+2    536365    84406B       CREAM CUPID HEARTS COAT HANGER         8   
+3    536365    84029G  KNITTED UNION FLAG HOT WATER BOTTLE         6   
+4    536365    84029E       RED WOOLLY HOTTIE WHITE HEART.         6   
+
+      InvoiceDate  UnitPrice  CustomerID         Country  
+0  12/1/2010 8:26       2.55     17850.0  United Kingdom  
+1  12/1/2010 8:26       3.39     17850.0  United Kingdom  
+2  12/1/2010 8:26       2.75     17850.0  United Kingdom  
+3  12/1/2010 8:26       3.39     17850.0  United Kingdom  
+4  12/1/2010 8:26       3.39     17850.0  United Kingdom  
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 541909 entries, 0 to 541908
+Data columns (total 8 columns):
+ #   Column       Non-Null Count   Dtype  
+---  ------       --------------   -----  
+ 0   InvoiceNo    541909 non-null  object 
+ 1   StockCode    541909 non-null  object 
+ 2   Description  540455 non-null  object 
+ 3   Quantity     541909 non-null  int64  
+ 4   InvoiceDate  541909 non-null  object 
+ 5   UnitPrice    541909 non-null  float64
+ 6   CustomerID   406829 non-null  float64
+ 7   Country      541909 non-null  object 
+dtypes: float64(2), int64(1), object(5)
+memory usage: 33.1+ MB
+None
+InvoiceNo           0
+StockCode           0
+Description      1454
+Quantity            0
+InvoiceDate         0
+UnitPrice           0
+CustomerID     135080
+Country             0
+dtype: int64
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [5]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre>df = df.dropna(subset=['CustomerID'])</pre></div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [6]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre>df = df.drop_duplicates()</pre></div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [7]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre>unwanted = 'discount|manual|post|bank charges|D|C2|M|DOT'
+df = df[~df['Description'].str.contains(unwanted, case=False, na=False)]</pre></div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [8]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre>df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], dayfirst=True, errors='coerce')</pre></div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell">In the data cleaning step, transactions without a CustomerID were removed, duplicate records were eliminated, non-product entries (such as bank charges, postage, and manual entries) were filtered out, and the date format was converted to a DATE type compatible with SQL.</div>
+            </div>
+        </div>
+        <div class="cell cell-code">
+            <div class="cell-prompt input-prompt">In [13]:</div>
+            <div class="cell-content">
+                <div class="input-area"><pre># Save Clean Data for SQL &amp; Tableau
+customers = df[['CustomerID', 'Country']].drop_duplicates()
+customers.to_csv('customers_clean.csv', index=False)
+
+products = df[['StockCode', 'Description', 'UnitPrice']].drop_duplicates()
+products.to_csv('products_clean.csv', index=False)
+
+orders = df[['InvoiceNo', 'CustomerID', 'StockCode', 'Quantity', 'InvoiceDate']]
+orders.to_csv('orders_clean.csv', index=False)</pre></div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell">The cleaned dataset was exported to MySQL for analytical querying and subsequently used for visualization in Tableau.</div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell"><h1>Analysis using SQL Quiries</h1></div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell">The following SQL query calculates total customer spending based on<br>order quantity and unit price.<br><br><code></code>`sql<br>SELECT o.customer_id, SUM(o.quantity * p.unit_price)<br>AS total_spent<br>FROM orders o<br>JOIN products p ON o.stock_code = p.stock_code<br>GROUP BY o.customer_id<br>ORDER BY total_spent DESC<br>LIMIT 10;<br><code></code>`<br>![Top 10 Customers with Most Total Spent](customer.png)<br><br><br>The following SQL query calculates total revenue for top 10 products based on order quantity and unit price.<br><br><code></code>`sql<br>SELECT p.description, SUM(o.quantity * p.unit_price) AS revenue<br>FROM orders o<br>JOIN products p ON o.stock_code = p.stock_code<br>GROUP BY p.description<br>ORDER BY revenue DESC<br>LIMIT 10;<br><code></code>`<br>![10 Products with the Most Revenue](products.png)<br><br><br>The following SQL query returned the products with the most total returned / cancel purchase.<br><br><code></code>`sql<br>SELECT p.description, SUM(ABS(o.quantity)) AS total_returned<br>FROM orders o<br>JOIN products p ON o.stock_code = p.stock_code<br>WHERE o.quantity < 0<br>GROUP BY p.description<br>ORDER BY total_returned DESC<br>LIMIT 10;<br><code></code>`<br>![10 Most Returned Products](returned.png)<br><br><br>The following SQL query showed the total revenue for each month.<br><code></code>`sql<br>SELECT DATE_FORMAT(invoice_date, '%Y-%m') AS month, <br>       SUM(quantity * p.unit_price) AS monthly_revenue<br>FROM orders o<br>JOIN products p ON o.stock_code = p.stock_code<br>GROUP BY month<br>ORDER BY month;<br><code></code>`<br>![Monthly Revenue Trend](trend.png)<br><br><br>The following SQL query showed the 10 country with the most total revenue.<br><code></code>`sql<br>SELECT c.country, SUM(o.quantity * p.unit_price) AS total_revenue<br>FROM orders o<br>JOIN products p ON o.stock_code = p.stock_code<br>JOIN customers c ON o.customer_id = c.customer_id<br>GROUP BY c.country<br>ORDER BY total_revenue DESC;<br><code></code>`<br>![Top 10 Countries with the Most Revenue](country.png)</div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell"><h1>Data Visualization using Tableau</h1><br>The final insights are presented in an interactive Tableau dashboard.<br><br>Key visuals:<br>- Top 10 Customers by Revenue<br>- Monthly Revenue Trend (Line Chart)<br>- Top 10 Products by Revenue<br>- Most Returned Products<br>- Revenue by Country<br><br>🔗 Tableau Public Link: https://prod-ca-a.online.tableau.com/#/site/firilanjm-c5ba934292/views/E-CommerceAnalysis/Dashboard1?:iid=2 <br><br><br><br></div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell">![Top Customers](ecommerce.png)</div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell"><h2>Key Insights & Business Implications</h2><br><br>Revenue is highly concentrated among a single top customer, indicating potential business risk if this customer becomes inactive. To create amore stable revenue, the company should focus on engaging mid-tier customers through targeted promotions or loyalty programs.<br><br>From October to December 2011, a slight decline of total revenue suggests possible seasonal effects, increased returns, or reduced demand. Further analysis is needed to identify the root cause and prevent similar declines in the future.<br><br>Some products experience exceptionally high return volumes, with one product exceeding 1400 returned items. This may point to quality issues, non-obvious descriptions, or customer dissatisfaction and should be investigated to reduce losses. <br><br>Finally, most revenue comes from the United Kingdom, which is expected given the company's base. However, expanding marketing and ales efforts to other countries could help diversify revenue and support long-term growth.</div>
+            </div>
+        </div>
+        <div class="cell cell-markdown">
+            <div class="cell-prompt prompt-empty">&nbsp;</div>
+            <div class="cell-content">
+                <div class="markdown-cell"><h2>Conclusion</h2><br><br>This project demonstrates an e-commerce dataset using SQL for data aggregation, Python for data preparation, and Tableau for visualization to identify revenue patterns, customer behavior, and return trends. The analysis revealed revenue concentration among a small number of customers, a slight decline in late-2011 revenue, high return volumes for certain products, and heavy dependence on the UK market. These findings highlight opportunities to improve customer retention, reduce returnd, and expand internationally. </div>
+            </div>
+        </div>
+    </div>
+    <footer class="export-footer">
+        Exported with <a href="https://www.runcell.dev/tool/ipynb-to-html">runcell</a> — convert notebooks to HTML or PDF anytime at runcell.dev.
+    </footer>
+</body>
+</html>
