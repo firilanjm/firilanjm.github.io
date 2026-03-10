@@ -1,22 +1,32 @@
-## Projects
+# Data Science Portfolio
 
-### Credit Card Fraud Detection
-- Detect fraudulent transactions using ensemble ML models.
-- Tools: Python, LightGBM, XGBoost
-- [View Repo](https://github.com/username/credit-card-fraud-detection)
-- ![ROC Curve](images/fraud_roc_curve.png)
+A lightweight portfolio site with soft pink and soft blue theme.
 
-### E-Commerce Data Analytics
-- Analyzed 250,000 UK e-commerce transactions using Python, SQL, Tableau.
-- [View Repo](https://github.com/username/ecommerce-data-analytics)
-- ![Revenue Dashboard](images/ecommerce_dashboard.png)
+## Setup
 
-### Seismic Risk Modeling (Ongoing Research)
-- Investigating seismic memory patterns in Türkiye & Pacific Northwest.
-- [View Repo](https://github.com/username/seismic-risk-research)
-- ![Magnitude vs Depth](images/seismic_plot.png)
+1. Update links in `index.html` and `project.html`:
+   - LinkedIn: `https://linkedin.com/in/yourprofile`
+   - GitHub: `https://github.com/yourusername`
+   - Email: `your.email@example.com`
 
-### DataQuest Competition – 1st Place
-- Forecasted business trends using time-series & ML models.
-- [View Repo](https://github.com/username/dataquest-competition)
-- ![Competition Overview](images/dataquest_overview.png)
+2. Add your resume PDF at `assets/resume.pdf` (the Resume section links to it).
+
+3. Open `index.html` in a browser or serve with a local server.
+
+## GitHub Pages
+
+1. Push to a repo named `username.github.io` or `portfolio`
+2. Settings → Pages → Source: main branch
+3. Visit `https://username.github.io` or `https://username.github.io/portfolio`
+
+## Structure
+
+```
+├── index.html      # Main portfolio page
+├── project.html    # Project detail page
+├── css/style.css
+├── js/main.js
+├── assets/
+│   └── resume.pdf  # Your resume (add this file)
+└── README.md
+```
