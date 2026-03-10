@@ -22,18 +22,18 @@
 
   <main>
     <section class="hero">
-      <h1>Your Name</h1>
-      <p>Data Science | ML | NLP</p>
+      <h1>Firila Najma Wahidah</h1>
+      <p>Statistics | Data Science | Machine Learning</p>
     </section>
 
     <section id="about" class="about">
       <h2>About Me</h2>
       <div class="about-content">
         <div class="profile-photo">
-          <img src="https://placehold.co/200x200/E3F2FD/90CAF9?text=Photo" alt="Profile" />
+          <img src="profile-photo.png" alt="Profile" />
         </div>
         <div class="about-text">
-          <p>Data science intern candidate focused on end-to-end pipelines, advanced models, and actionable insights. Interested in NLP, time-series forecasting, and explainable ML.</p>
+          <p>I am a Statistics student, with a strong focus on <strong>data science, analytics, and applied statistical modeling</strong>. I specialize in designing end-to-end data pipelines, predictive models, and actionable insights, and I have experience in machine learning, natural language processing (NLP), Monte Carlo simulations, time-series forecasting, and data visualization. I am passionate about transforming complex data into clear, data-driven stories to support decision-making, policy development, and real-world problem solving. My work combines technical rigor with practical impact, ensuring that insights lead to actionable outcomes.</p>
           <a href="assets/resume.pdf" class="btn" download target="_blank" rel="noopener noreferrer">
             <i class="fa-solid fa-file-pdf"></i> Download Resume
           </a>
@@ -45,40 +45,86 @@
       <h2>Projects</h2>
       <div class="project-grid">
         <article class="project-card">
-          <h3>Review Intelligence</h3>
-          <p>Semantic search & sentiment analysis on review text using transformer embeddings.</p>
-          <div class="viz-thumb"><img src="https://placehold.co/400x160/E3F2FD/90CAF9?text=Confusion+Matrix" alt="Project visualization" /></div>
+          <h3>Monte Carlo MBG Fund</h3>
+          <p>Simulated the sustainability of the Indonesian MBG Fund using Monte Carlo methods, quantifying the probability of funding a portion of the program over 10 years under uncertain yields and inflation.</p>
+          <div class="viz-thumb"><img src="images/mbg.png" alt="Monte Carlo MBG visualization" /></div>
+          <div class="tags">
+            <span>R</span>
+            <span>Monte Carlo</span>
+            <span>Simulation</span>
+            <span>Patchwork</span>
+          </div>
+          <a href="notebooks/mbg-monte-carlo.html" class="btn">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Credit Card Fraud Detection</h3>
+          <p>Built a machine learning model to detect fraudulent transactions with high precision and recall, identifying key transaction patterns.</p>
+          <div class="viz-thumb"><img src="images/creditcard.png" alt="Credit card fraud detection" /></div>
+          <div class="tags">
+            <span>Python</span>
+            <span>Classification</span>
+            <span>Random Forest</span>
+            <span>XGBoost</span>
+            <span>CatBoost</span>
+            <span>LightGBM</span>
+            <span>Scikit-learn</span>
+          </div>
+          <a href="notebooks/creditcard.html" class="btn">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>NLP Twitter Sentiment Analysis</h3>
+          <p>This project analyzes public sentiment toward multiple brands and games using Twitter data.</p>
+          <div class="viz-thumb"><img src="images/nlp.png" alt="NLP sentiment analysis" /></div>
           <div class="tags">
             <span>Python</span>
             <span>NLP</span>
-            <span>Sentence-BERT</span>
-            <span>Streamlit</span>
+            <span>TF-IDF</span>
+            <span>Logistic Regression</span>
+            <span>Matplotlib</span>
+            <span>Seaborn</span>
+            <span>WordCloud</span>
           </div>
-          <a href="project.html" class="btn">View Project</a>
+          <a href="notebooks/twitter_sentiment.html" class="btn">View Project</a>
         </article>
+
         <article class="project-card">
-          <h3>Customer Churn</h3>
-          <p>Churn prediction with SHAP explainability and calibrated classifiers.</p>
-          <div class="viz-thumb"><img src="https://placehold.co/400x160/FCE4EC/F48FB1?text=SHAP+Summary" alt="Project visualization" /></div>
+          <h3>Business Forecasting in Vancouver</h3>
+          <p>Developed predictive models for business performance forecasting; awarded 1st place in the Dataquest Competition. Contributed to time-series modeling, data cleaning, and visualization.</p>
+          <div class="viz-thumb"><img src="images/business.png" alt="Business forecasting" /></div>
           <div class="tags">
-            <span>Python</span>
-            <span>XGBoost</span>
-            <span>SHAP</span>
-            <span>Scikit-learn</span>
-          </div>
-          <a href="project.html" class="btn">View Project</a>
-        </article>
-        <article class="project-card">
-          <h3>Demand Forecasting</h3>
-          <p>Time-series forecasting with N-BEATS and uncertainty bands.</p>
-          <div class="viz-thumb"><img src="https://placehold.co/400x160/E3F2FD/90CAF9?text=Forecast+Plot" alt="Project visualization" /></div>
-          <div class="tags">
-            <span>Python</span>
-            <span>N-BEATS</span>
-            <span>PyTorch</span>
             <span>Pandas</span>
+            <span>Time Series</span>
+            <span>Forecasting</span>
+            <span>Team Project</span>
           </div>
-          <a href="project.html" class="btn">View Project</a>
+          <a href="notebooks/business.html" class="btn">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>E-commerce Customer Analysis</h3>
+          <p>Explored customer behavior and purchasing patterns, generating actionable insights for marketing and inventory management.</p>
+          <div class="viz-thumb"><img src="images/ecommerce.png" alt="E-commerce analysis" /></div>
+          <div class="tags">
+            <span>SQL</span>
+            <span>Tableau</span>
+            <span>Python</span>
+            <span>Data Analysis</span>
+          </div>
+          <a href="notebooks/ecommerce_analytics.html" class="btn">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Seismic Research Analysis</h3>
+          <p>Analyzed seismic data from Türkiye to identify statistical relationships among earthquake parameters, including magnitude and depth, and assess transferability of patterns to Pacific Northwest.</p>
+          <div class="viz-thumb"><img src="images/seismic.png" alt="Seismic research" /></div>
+          <div class="tags">
+            <span>R</span>
+            <span>Data Analysis</span>
+            <span>Statistical Modeling</span>
+          </div>
+          <a href="notebooks/seismic-risk.html" class="btn">View Project</a>
         </article>
       </div>
     </section>
@@ -86,13 +132,13 @@
     <section id="contact" class="contact">
       <h2>Contact</h2>
       <div class="social-links">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/firilanjm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/firilanjm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="mailto:your.email@example.com" aria-label="Email">
+        <a href="mailto:firilanjm@gmail.com" aria-label="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
@@ -100,7 +146,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Portfolio. All rights reserved.</p>
+    <p>&copy; 2026 Portfolio. All rights reserved.</p>
   </footer>
 
   <script src="js/main.js"></script>
