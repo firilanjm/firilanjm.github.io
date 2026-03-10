@@ -1,0 +1,401 @@
+/* Soft pink & soft blue - clean, professional, no gradients */
+
+:root {
+  --soft-blue: #E3F2FD;
+  --soft-blue-accent: #BBDEFB;
+  --soft-pink: #FFF0F5;
+  --soft-pink-accent: #FCE4EC;
+  --text: #37474F;
+  --text-light: #607D8B;
+  --bg: #FAFAFA;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--soft-blue);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--text-light);
+}
+
+/* Main */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.hero p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* About Me */
+.about {
+  padding: 2.5rem 0;
+  background: var(--soft-pink);
+  margin: 0 -2rem;
+  padding: 2.5rem 2rem;
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text .btn {
+  margin-top: 1rem;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--soft-blue-accent);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.about-text p {
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+
+/* Projects */
+.projects {
+  padding: 2.5rem 0;
+}
+
+.projects h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--soft-blue-accent);
+  border-left: 4px solid var(--soft-pink-accent);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card > p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.viz-thumb {
+  width: 100%;
+  height: 120px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: var(--soft-blue);
+}
+
+.viz-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card .tags {
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--soft-blue);
+  color: var(--text);
+  border-radius: 4px;
+}
+
+.project-card .tags span:nth-child(odd) {
+  background: var(--soft-pink-accent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--soft-blue-accent);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--soft-pink-accent);
+}
+
+.btn-secondary {
+  background: var(--soft-pink-accent);
+}
+
+.btn-secondary:hover {
+  background: var(--soft-blue-accent);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--soft-blue);
+  color: var(--text);
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  background: var(--soft-pink-accent);
+}
+
+.social-links a i {
+  font-size: 1.2rem;
+}
+
+/* Contact */
+.contact {
+  padding: 2rem 0;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.contact .social-links {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: var(--soft-blue);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer .social-links {
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Project detail page */
+.project-detail {
+  padding: 2rem 0;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span:last-child {
+  color: var(--text-light);
+}
+
+.project-detail h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.project-detail .tags {
+  margin-bottom: 1.5rem;
+}
+
+.project-viz {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: var(--soft-blue);
+  border: 1px solid var(--soft-blue-accent);
+}
+
+.project-viz img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.metrics {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.metric .label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.project-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-section {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--soft-blue-accent);
+}
+
+.contact-section h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
