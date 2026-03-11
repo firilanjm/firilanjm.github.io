@@ -21,51 +21,36 @@
   </header>
 
   <main class="project-detail">
+    <div id="project-content">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Portfolio</a>
       <span aria-hidden="true">/</span>
-      <span>Review Intelligence</span>
+      <span id="breadcrumb-title">Project</span>
     </nav>
 
-    <h1>Review Intelligence & Semantic Search</h1>
-    <p class="subtitle">NLP-powered review exploration with embeddings and sentiment analysis</p>
+    <h1 id="project-title">Project</h1>
+    <p class="subtitle" id="project-subtitle"></p>
 
-    <p class="description">
-      End-to-end NLP project using the Yelp dataset. Semantic search retrieves relevant reviews and businesses from natural-language queries. Aspect-based sentiment and topic clustering surface insights from unstructured text.
-    </p>
+    <p class="description" id="project-description"></p>
 
-    <div class="tags">
-      <span>Python</span>
-      <span>NLP</span>
-      <span>Sentence-BERT</span>
-      <span>Streamlit</span>
-      <span>Pandas</span>
-    </div>
+    <div class="tags" id="project-tags"></div>
 
     <div class="project-viz">
-      <img src="https://placehold.co/800x400/E3F2FD/90CAF9?text=Confusion+Matrix+%26+Sentiment" alt="Project visualization" />
+      <img id="project-image" src="" alt="" />
     </div>
 
-    <div class="metrics">
-      <div class="metric">
-        <span class="value">0.87</span>
-        <span class="label">Accuracy</span>
-      </div>
-      <div class="metric">
-        <span class="value">0.85</span>
-        <span class="label">F1 Score</span>
-      </div>
-      <div class="metric">
-        <span class="value">0.12</span>
-        <span class="label">MAE</span>
-      </div>
-    </div>
+    <div class="metrics" id="project-metrics"></div>
 
-    <div class="project-actions">
-      <a href="https://github.com/firilanjm" target="_blank" rel="noopener noreferrer" class="btn">
+    <div class="project-actions" id="project-actions">
+      <a id="link-notebook" href="index.html#projects" class="btn">View HTML</a>
+      <a id="link-github" href="https://github.com/firilanjm" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
         <i class="fa-brands fa-github"></i> View on GitHub
       </a>
       <a href="index.html#projects" class="btn btn-secondary">Back to Projects</a>
+    </div>
+    </div>
+    <div id="no-project-message" class="no-project-message" style="display: none;">
+      <p>Select a project from the <a href="index.html#projects">portfolio</a>.</p>
     </div>
   </main>
 
@@ -73,6 +58,138 @@
     <p>&copy; 2026 Portfolio. All rights reserved.</p>
   </footer>
 
+  <script>
+    const PROJECTS = {
+      mbg: {
+        title: 'Monte Carlo MBG Fund',
+        subtitle: 'Simulating Indonesian MBG Fund sustainability under uncertainty',
+        description: 'Simulated the sustainability of the Indonesian MBG Fund using Monte Carlo methods, quantifying the probability of funding a portion of the program over 10 years under uncertain yields and inflation.',
+        tags: ['R', 'Monte Carlo', 'Simulation', 'Patchwork'],
+        image: 'images/mbg.png',
+        imageAlt: 'Monte Carlo MBG visualization',
+        notebook: 'notebooks/mbg-monte-carlo.html',
+        github: 'https://github.com/firilanjm/mbg-monte-carlo',
+        metrics: [
+          { value: '10', label: 'Years' },
+          { value: 'Monte Carlo', label: 'Method' },
+          { value: 'MBG Fund', label: 'Indonesia' }
+        ]
+      },
+      creditcard: {
+        title: 'Credit Card Fraud Detection',
+        subtitle: 'ML-based detection of fraudulent transactions',
+        description: 'Built a machine learning model to detect fraudulent transactions with high precision and recall, identifying key transaction patterns.',
+        tags: ['Python', 'Classification', 'Random Forest', 'XGBoost', 'CatBoost', 'LightGBM', 'Scikit-learn'],
+        image: 'images/creditcard.png',
+        imageAlt: 'Credit card fraud detection',
+        notebook: 'notebooks/creditcard.html',
+        github: 'https://github.com/firilanjm/credit-card-fraud-detection',
+        metrics: [
+          { value: 'High', label: 'Precision' },
+          { value: 'High', label: 'Recall' },
+          { value: 'ML', label: 'Classification' }
+        ]
+      },
+      nlp: {
+        title: 'NLP Twitter Sentiment Analysis',
+        subtitle: 'Public sentiment toward brands and games from Twitter',
+        description: 'This project analyzes public sentiment toward multiple brands and games using Twitter data.',
+        tags: ['Python', 'NLP', 'TF-IDF', 'Logistic Regression', 'Matplotlib', 'Seaborn', 'WordCloud'],
+        image: 'images/nlp.png',
+        imageAlt: 'NLP sentiment analysis',
+        notebook: 'notebooks/twitter_sentiment.html',
+        github: 'https://github.com/firilanjm/twitter-sentiment-analysis',
+        metrics: [
+          { value: 'Twitter', label: 'Data' },
+          { value: 'Sentiment', label: 'Analysis' },
+          { value: 'NLP', label: 'Focus' }
+        ]
+      },
+      business: {
+        title: 'Business Forecasting in Vancouver',
+        subtitle: '1st place — Dataquest Competition',
+        description: 'Developed predictive models for business performance forecasting; awarded 1st place in the Dataquest Competition. Contributed to time-series modeling, data cleaning, and visualization.',
+        tags: ['Pandas', 'Time Series', 'Forecasting', 'Team Project'],
+        image: 'images/business.png',
+        imageAlt: 'Business forecasting',
+        notebook: 'notebooks/business.html',
+        github: 'https://github.com/ShawnGabriel/dataquest-svm',
+        metrics: [
+          { value: '1st', label: 'Place' },
+          { value: 'Time Series', label: 'Modeling' },
+          { value: 'Vancouver', label: 'Focus' }
+        ]
+      },
+      ecommerce: {
+        title: 'E-commerce Customer Analysis',
+        subtitle: 'Behavior and purchasing patterns for marketing & inventory',
+        description: 'Explored customer behavior and purchasing patterns, generating actionable insights for marketing and inventory management.',
+        tags: ['SQL', 'Tableau', 'Python', 'Data Analysis'],
+        image: 'images/ecommerce.png',
+        imageAlt: 'E-commerce analysis',
+        notebook: 'notebooks/ecommerce_analytics.html',
+        github: 'https://github.com/firilanjm/ecommerce-analysis',
+        metrics: [
+          { value: 'Customer', label: 'Behavior' },
+          { value: 'Marketing', label: 'Insights' },
+          { value: 'SQL', label: '& Tableau' }
+        ]
+      },
+      seismic: {
+        title: 'Seismic Research Analysis',
+        subtitle: 'Earthquake parameters and transferability to Pacific Northwest',
+        description: 'Analyzed seismic data from Türkiye to identify statistical relationships among earthquake parameters, including magnitude and depth, and assess transferability of patterns to Pacific Northwest.',
+        tags: ['R', 'Data Analysis', 'Statistical Modeling'],
+        image: 'images/seismic.png',
+        imageAlt: 'Seismic research',
+        notebook: 'notebooks/seismic-risk.html',
+        github: 'https://github.com/firilanjm/seismic-research',
+        metrics: [
+          { value: 'Türkiye', label: 'Data' },
+          { value: 'Magnitude', label: '& Depth' },
+          { value: 'R', label: 'Analysis' }
+        ]
+      }
+    };
+
+    function getProjectId() {
+      const params = new URLSearchParams(window.location.search);
+      const p = params.get('p');
+      return PROJECTS[p] ? p : 'mbg';
+    }
+
+    function renderProject(id) {
+      const project = PROJECTS[id];
+      if (!project) return;
+
+      document.title = project.title + ' | Data Science Portfolio';
+      document.getElementById('breadcrumb-title').textContent = project.title;
+      document.getElementById('project-title').textContent = project.title;
+      document.getElementById('project-subtitle').textContent = project.subtitle;
+      document.getElementById('project-description').textContent = project.description;
+
+      const tagsEl = document.getElementById('project-tags');
+      tagsEl.innerHTML = project.tags.map(t => '<span>' + t + '</span>').join('');
+
+      const img = document.getElementById('project-image');
+      img.src = project.image;
+      img.alt = project.imageAlt;
+
+      const metricsEl = document.getElementById('project-metrics');
+      metricsEl.innerHTML = project.metrics.map(m =>
+        '<div class="metric"><span class="value">' + m.value + '</span><span class="label">' + m.label + '</span></div>'
+      ).join('');
+
+      const notebookLink = document.getElementById('link-notebook');
+      notebookLink.href = project.notebook;
+      notebookLink.textContent = 'View HTML';
+
+      const githubLink = document.getElementById('link-github');
+      githubLink.href = project.github;
+    }
+
+    renderProject(getProjectId());
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
