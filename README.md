@@ -1,32 +1,75 @@
-# Data Science Portfolio
+# Firila Najma Wahidah — Portfolio
 
-A lightweight portfolio site with soft pink and soft blue theme.
+Professional portfolio website for a Statistics student specializing in **Data Science** and **Machine Learning**.
 
-## Setup
+Live site: [https://firilanjm.github.io/](https://firilanjm.github.io/)
 
-1. Update links in `index.html` and `project.html`:
-   - LinkedIn: `https://linkedin.com/in/yourprofile`
-   - GitHub: `https://github.com/yourusername`
-   - Email: `your.email@example.com`
+## About
 
-2. Add your resume PDF at `assets/resume.pdf` (the Resume section links to it).
+Statistics · Data Science · Machine Learning
 
-3. Open `index.html` in a browser or serve with a local server.
+I specialize in end-to-end data pipelines, predictive models, NLP, Monte Carlo simulations, time-series forecasting, and data visualization — turning complex data into actionable insights.
 
-## GitHub Pages
+## Tech Stack
 
-1. Push to a repo named `username.github.io` or `portfolio`
-2. Settings → Pages → Source: main branch
-3. Visit `https://username.github.io` or `https://username.github.io/portfolio`
+- HTML5
+- CSS3 (custom properties, responsive grid)
+- Vanilla JavaScript
+- GitHub REST API (live project feed)
 
-## Structure
+## Project Structure
 
 ```
-├── index.html      # Main portfolio page
-├── project.html    # Project detail page
-├── css/style.css
-├── js/main.js
+portfolio/
+├── index.html          # Main page
+├── style.css           # Styles
+├── script.js           # UI interactions & GitHub stats
 ├── assets/
-│   └── resume.pdf  # Your resume (add this file)
+│   └── favicon.svg     # Site icon
+├── .gitignore
+├── .nojekyll           # Required for GitHub Pages
+├── LICENSE
 └── README.md
 ```
+
+## Quick Start
+
+### 1. Preview locally
+
+Open `index.html` in your browser, or run a local server:
+
+```bash
+# Python
+python3 -m http.server 8000
+
+# Then visit http://localhost:8000
+```
+
+### 2. Deploy to GitHub Pages
+
+Push to your existing `firilanjm.github.io` repo:
+
+```bash
+git clone https://github.com/firilanjm/firilanjm.github.io.git
+cd firilanjm.github.io
+# copy portfolio files here, then:
+git add .
+git commit -m "Redesign portfolio"
+git push origin main
+```
+
+Site updates at [https://firilanjm.github.io/](https://firilanjm.github.io/) within a few minutes.
+
+## Sections
+
+| Section | Description |
+|---------|-------------|
+| Hero | Name, tagline, GitHub stats |
+| About | Profile & focus areas |
+| Projects | 6 curated projects with direct GitHub links |
+| Skills | ML, Statistics, Data Engineering |
+| Contact | Email, LinkedIn, GitHub links |
+
+## License
+
+MIT — see [LICENSE](LICENSE).

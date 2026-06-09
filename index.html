@@ -1,150 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Science Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firila Najma Wahidah — Data Science &amp; ML</title>
+  <meta name="description" content="Portfolio of Firila Najma Wahidah — Statistics student specializing in Data Science, Machine Learning, NLP, and applied statistical modeling." />
+  <meta name="author" content="Firila Najma Wahidah" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo">Portfolio</a>
-      <ul>
-        <li><a href="#projects">Projects</a></li>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <span class="nav__monogram">FN</span>
+        <span class="nav__name">Firila Najma Wahidah</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#about">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="nav__github" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Firila Najma Wahidah</h1>
-      <p>Statistics | Data Science | Machine Learning</p>
+
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Statistics · Data Science · Machine Learning</p>
+          <h1 class="hero__title">
+            Turning data into<br />
+            <em>intelligent insights</em>
+          </h1>
+          <p class="hero__desc">
+            I design end-to-end data pipelines, predictive models, and actionable insights —
+            transforming complex data into clear, data-driven stories.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+          </div>
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__num" id="repoCount">—</span>
+              <span class="stat__label">Repositories</span>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat">
+              <span class="stat__num" id="followerCount">—</span>
+              <span class="stat__label">Followers</span>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat">
+              <span class="stat__num">6</span>
+              <span class="stat__label">Projects</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__frame">
+            <div class="hero__avatar">
+              <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="100" cy="100" r="100" fill="#F0EBE8"/>
+                <circle cx="40" cy="50" r="4" fill="#C4A99A" opacity="0.5"/>
+                <circle cx="70" cy="35" r="4" fill="#C4A99A" opacity="0.5"/>
+                <circle cx="130" cy="40" r="4" fill="#C4A99A" opacity="0.5"/>
+                <circle cx="160" cy="55" r="4" fill="#C4A99A" opacity="0.5"/>
+                <circle cx="55" cy="90" r="4" fill="#8B8B8B" opacity="0.4"/>
+                <circle cx="145" cy="85" r="4" fill="#8B8B8B" opacity="0.4"/>
+                <line x1="40" y1="50" x2="55" y2="90" stroke="#C8C4BE" stroke-width="0.8" opacity="0.5"/>
+                <line x1="70" y1="35" x2="55" y2="90" stroke="#C8C4BE" stroke-width="0.8" opacity="0.5"/>
+                <line x1="130" y1="40" x2="145" y2="85" stroke="#C8C4BE" stroke-width="0.8" opacity="0.5"/>
+                <line x1="160" y1="55" x2="145" y2="85" stroke="#C8C4BE" stroke-width="0.8" opacity="0.5"/>
+                <ellipse cx="100" cy="175" rx="55" ry="30" fill="#E8DDD8"/>
+                <circle cx="100" cy="82" r="38" fill="#D4C4BC"/>
+                <path d="M62 78c8-18 28-28 38-28s30 10 38 28" stroke="#C4B0A8" stroke-width="2" fill="none"/>
+                <ellipse cx="88" cy="80" rx="4" ry="5" fill="#8B7B74"/>
+                <ellipse cx="112" cy="80" rx="4" ry="5" fill="#8B7B74"/>
+                <path d="M94 92 Q100 97 106 92" stroke="#B8A49C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="hero__badge">
+              <span class="hero__badge-dot"></span>
+              Open to opportunities
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span>Scroll</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
     </section>
 
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <div class="profile-photo">
-          <img src="profile-photo.png" alt="Profile" />
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">About Me</span>
+          <h2 class="section__title">Profile</h2>
         </div>
-        <div class="about-text">
-          <p>I am a Statistics student, with a strong focus on data science, analytics, and applied statistical modeling. I specialize in designing end-to-end data pipelines, predictive models, and actionable insights, and I have experience in machine learning, natural language processing (NLP), Monte Carlo simulations, time-series forecasting, and data visualization. I am passionate about transforming complex data into clear, data-driven stories to support decision-making, policy development, and real-world problem solving.</p>
-          <a href="assets/Resume_Firila_Najma_Wahidah (5).pdf" class="btn" download target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-file-pdf"></i> Download Resume
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__lead">
+              Hi, I'm <strong>Firila</strong> — a Statistics student with a strong focus on
+              data science, analytics, and applied statistical modeling.
+            </p>
+            <p>
+              I specialize in designing end-to-end data pipelines, predictive models, and
+              actionable insights, and I have experience in machine learning, natural language
+              processing (NLP), Monte Carlo simulations, time-series forecasting, and data
+              visualization.
+            </p>
+            <p>
+              I am passionate about transforming complex data into clear, data-driven stories
+              to support decision-making, policy development, and real-world problem solving.
+            </p>
+            <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="about__link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View GitHub Profile
+            </a>
+          </div>
+          <div class="about__timeline">
+            <div class="timeline__item">
+              <span class="timeline__year">Present</span>
+              <h3>Statistics Student</h3>
+              <p>Building expertise in data science, ML, and applied statistical modeling through coursework and projects.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__year">Focus Areas</span>
+              <h3>ML · NLP · Forecasting</h3>
+              <p>Predictive modeling, NLP pipelines, Monte Carlo simulations, and time-series analysis.</p>
+            </div>
+            <div class="timeline__item">
+              <span class="timeline__year">Mission</span>
+              <h3>Data-Driven Impact</h3>
+              <p>Turning complex datasets into insights that support decisions, policy, and real-world solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section__header section__header--row">
+          <div>
+            <span class="section__tag">Work</span>
+            <h2 class="section__title">ML &amp; Data Projects</h2>
+          </div>
+          <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
+            All repositories →
           </a>
         </div>
+        <div class="projects__grid">
+
+          <a href="https://github.com/firilanjm/monte-carlo-mbg" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__name">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
+                Monte Carlo MBG Fund
+              </span>
+            </div>
+            <p class="project-card__desc">Simulated the sustainability of the Indonesian MBG Fund using Monte Carlo methods, quantifying the probability of funding a portion of the program over 10 years under uncertain yields and inflation.</p>
+            <div class="project-card__tags">
+              <span>R</span><span>Monte Carlo</span><span>Simulation</span><span>Patchwork</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__link">View on GitHub →</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/firilanjm/credit-card-fraud-detection" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__name">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
+                Credit Card Fraud Detection
+              </span>
+            </div>
+            <p class="project-card__desc">Built a machine learning model to detect fraudulent transactions with high precision and recall, identifying key transaction patterns.</p>
+            <div class="project-card__tags">
+              <span>Random Forest</span><span>XGBoost</span><span>CatBoost</span><span>LightGBM</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__link">View on GitHub →</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/firilanjm/twitter-sentiment-analysis" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__name">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
+                NLP Twitter Sentiment Analysis
+              </span>
+            </div>
+            <p class="project-card__desc">Analyzes public sentiment toward multiple brands and games using Twitter data, applying NLP techniques for text classification.</p>
+            <div class="project-card__tags">
+              <span>Python</span><span>NLP</span><span>TF-IDF</span><span>Logistic Regression</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__link">View on GitHub →</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/ShawnGabriel/dataquest-svm" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__name">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
+                Business Forecasting in Vancouver
+              </span>
+            </div>
+            <p class="project-card__desc">Developed predictive models for business performance forecasting; awarded 1st place in the Dataquest Competition. Contributed to time-series modeling, data cleaning, and visualization.</p>
+            <div class="project-card__tags">
+              <span>Pandas</span><span>Time Series</span><span>Forecasting</span><span>Team Project</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__link">View on GitHub →</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/firilanjm/ecommerce-analysis" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__name">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
+                E-commerce Customer Analysis
+              </span>
+            </div>
+            <p class="project-card__desc">Explored customer behavior and purchasing patterns, generating actionable insights for marketing and inventory management.</p>
+            <div class="project-card__tags">
+              <span>SQL</span><span>Tableau</span><span>Python</span><span>Data Analysis</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__link">View on GitHub →</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/firilanjm/seismic-research" target="_blank" rel="noopener" class="project-card">
+            <div class="project-card__header">
+              <span class="project-card__name">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
+                Seismic Research Analysis
+              </span>
+            </div>
+            <p class="project-card__desc">Analyzed seismic data from Türkiye to identify statistical relationships among earthquake parameters, including magnitude and depth, and assess transferability of patterns to Pacific Northwest.</p>
+            <div class="project-card__tags">
+              <span>R</span><span>Data Wrangling</span><span>Statistical Modeling</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="project-card__link">View on GitHub →</span>
+            </div>
+          </a>
+
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <article class="project-card">
-          <h3>Monte Carlo MBG Fund</h3>
-          <p>Simulated the sustainability of the Indonesian MBG Fund using Monte Carlo methods, quantifying the probability of funding a portion of the program over 10 years under uncertain yields and inflation.</p>
-          <div class="viz-thumb"><img src="images/mbg.png" alt="Monte Carlo MBG visualization" /></div>
-          <div class="tags">
-            <span>R</span>
-            <span>Monte Carlo</span>
-            <span>Simulation</span>
-            <span>Patchwork</span>
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag">Expertise</span>
+          <h2 class="section__title">Skills &amp; Tools</h2>
+        </div>
+        <div class="skills__grid">
+          <div class="skill-group">
+            <h3 class="skill-group__title">Machine Learning</h3>
+            <ul class="skill-list">
+              <li><span>Predictive Modeling</span><div class="skill-bar"><div style="width:90%"></div></div></li>
+              <li><span>Scikit-learn / XGBoost</span><div class="skill-bar"><div style="width:88%"></div></div></li>
+              <li><span>NLP &amp; Text Analytics</span><div class="skill-bar"><div style="width:85%"></div></div></li>
+            </ul>
           </div>
-          <a href="project.html?p=mbg" class="btn">View Project</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Credit Card Fraud Detection</h3>
-          <p>Built a machine learning model to detect fraudulent transactions with high precision and recall, identifying key transaction patterns.</p>
-          <div class="viz-thumb"><img src="images/creditcard.png" alt="Credit card fraud detection" /></div>
-          <div class="tags">
-            <span>Random Forest</span>
-            <span>XGBoost</span>
-            <span>CatBoost</span>
-            <span>LightGBM</span>
-            <span>Scikit-learn</span>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Statistics &amp; Analytics</h3>
+            <ul class="skill-list">
+              <li><span>Statistical Modeling</span><div class="skill-bar"><div style="width:92%"></div></div></li>
+              <li><span>Monte Carlo Simulation</span><div class="skill-bar"><div style="width:86%"></div></div></li>
+              <li><span>Time-Series Forecasting</span><div class="skill-bar"><div style="width:88%"></div></div></li>
+            </ul>
           </div>
-          <a href="project.html?p=creditcard" class="btn">View Project</a>
-        </article>
-
-        <article class="project-card">
-          <h3>NLP Twitter Sentiment Analysis</h3>
-          <p>This project analyzes public sentiment toward multiple brands and games using Twitter data.</p>
-          <div class="viz-thumb"><img src="images/nlp.png" alt="NLP sentiment analysis" /></div>
-          <div class="tags">
-            <span>Python</span>
-            <span>NLP</span>
-            <span>TF-IDF</span>
-            <span>Logistic Regression</span>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Data Engineering &amp; Viz</h3>
+            <ul class="skill-list">
+              <li><span>Python / Pandas</span><div class="skill-bar"><div style="width:93%"></div></div></li>
+              <li><span>Data Pipelines / SQL</span><div class="skill-bar"><div style="width:85%"></div></div></li>
+              <li><span>Matplotlib / Plotly</span><div class="skill-bar"><div style="width:90%"></div></div></li>
+            </ul>
           </div>
-          <a href="project.html?p=nlp" class="btn">View Project</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Business Forecasting in Vancouver</h3>
-          <p>Developed predictive models for business performance forecasting; awarded 1st place in the Dataquest Competition. Contributed to time-series modeling, data cleaning, and visualization.</p>
-          <div class="viz-thumb"><img src="images/business.png" alt="Business forecasting" /></div>
-          <div class="tags">
-            <span>Pandas</span>
-            <span>Time Series</span>
-            <span>Forecasting</span>
-            <span>Team Project</span>
-          </div>
-          <a href="project.html?p=business" class="btn">View Project</a>
-        </article>
-
-        <article class="project-card">
-          <h3>E-commerce Customer Analysis</h3>
-          <p>Explored customer behavior and purchasing patterns, generating actionable insights for marketing and inventory management.</p>
-          <div class="viz-thumb"><img src="images/ecommerce.png" alt="E-commerce analysis" /></div>
-          <div class="tags">
-            <span>SQL</span>
-            <span>Tableau</span>
-            <span>Python</span>
-            <span>Data Analysis</span>
-          </div>
-          <a href="project.html?p=ecommerce" class="btn">View Project</a>
-        </article>
-
-        <article class="project-card">
-          <h3>Seismic Research Analysis</h3>
-          <p>Analyzed seismic data from Türkiye to identify statistical relationships among earthquake parameters, including magnitude and depth, and assess transferability of patterns to Pacific Northwest.</p>
-          <div class="viz-thumb"><img src="images/seismic.png" alt="Seismic research" /></div>
-          <div class="tags">
-            <span>R</span>
-            <span>Data Wrangling</span>
-            <span>Data Analysis</span>
-            <span>Statistical Modeling</span>
-          </div>
-          <a href="project.html?p=seismic" class="btn">View Project</a>
-        </article>
+        </div>
+        <div class="skills__tags">
+          <span>Statistics</span><span>Data Science</span><span>Jupyter</span><span>R</span>
+          <span>Feature Engineering</span><span>A/B Testing</span><span>Git</span><span>Reproducible Research</span>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/firilanjm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/firilanjm" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="mailto:firilanjm@gmail.com" aria-label="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__info">
+            <span class="section__tag">Contact</span>
+            <h2 class="section__title">Let's work<br /><em>together</em></h2>
+            <p>Interested in collaborating on data science, ML, or analytics projects? I'd love to connect.</p>
+            <div class="contact__links">
+              <a href="mailto:firilanjm@gmail.com" class="contact__link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                firilanjm@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/firilanjm/" target="_blank" rel="noopener" class="contact__link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="contact__link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required />
+            </div>
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Describe your data challenge or ML use case..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Portfolio. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2026 Firila Najma Wahidah. Crafted with care.</p>
+      <div class="footer__social">
+        <a href="https://github.com/firilanjm" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/firilanjm/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:firilanjm@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        </a>
+      </div>
+    </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
