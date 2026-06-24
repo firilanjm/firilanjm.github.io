@@ -3,342 +3,999 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Firila Najma Wahidah — Data Science &amp; ML</title>
-  <meta name="description" content="Portfolio of Firila Najma Wahidah — Statistics student specializing in Data Science, Machine Learning, NLP, and applied statistical modeling." />
+  <title>Firila Najma Wahidah — Statistics • Research • Community Impact</title>
+  <meta name="description" content="Academic portfolio of Firila Najma Wahidah — Statistics student at UBC, BRIN research intern, Dean's List scholar, and community leader. Graduate admissions, scholarships, and research." />
   <meta name="author" content="Firila Najma Wahidah" />
+  <meta name="theme-color" content="#FAFAF8" />
+  <meta property="og:title" content="Firila Najma Wahidah — Academic Portfolio" />
+  <meta property="og:description" content="Statistics • Research • Community Impact — Academic portfolio for graduate admissions, fellowships, and scholarships." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://firilanjm.github.io/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/firila_photo.jpg" as="image" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">
-        <img src="assets/FN.png" alt="Logo" class="nav__monogram-img" />
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#home" class="nav__logo">
+        <img src="assets/FN.png" alt="" width="36" height="36" class="nav__monogram-img" />
         <span class="nav__name">Firila Najma Wahidah</span>
       </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <button class="nav__toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#research" class="nav__link">Research</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#leadership" class="nav__link">Leadership</a></li>
+        <li><a href="#community" class="nav__link">Community</a></li>
+        <li><a href="#awards" class="nav__link">Awards</a></li>
+        <li><a href="#resume" class="nav__link">Resume</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
         <li>
           <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="nav__github" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
 
-    <section class="hero" id="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="hero__eyebrow">Statistics · Data Science · Machine Learning</p>
-          <h1 class="hero__title">
-            Turning data into<br />
-            <em>intelligent insights</em>
-          </h1>
-          <p class="hero__desc">
-            I design end-to-end data pipelines, predictive models, and actionable insights —
-            transforming complex data into clear, data-driven stories.
-          </p>
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">View Projects</a>
-            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
-          </div>
-          <div class="hero__stats">
-            <div class="stat">
-              <span class="stat__num" id="repoCount">—</span>
-              <span class="stat__label">Repositories</span>
-            </div>
-            <div class="stat__divider"></div>
-            <div class="stat">
-              <span class="stat__num" id="followerCount">—</span>
-              <span class="stat__label">Followers</span>
-            </div>
-            <div class="stat__divider"></div>
-            <div class="stat">
-              <span class="stat__num">6</span>
-              <span class="stat__label">Projects</span>
-            </div>
-          </div>
+  <!-- Home -->
+  <section class="hero" id="home" aria-label="Introduction">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">Firila Najma Wahidah</h1>
+        <p class="hero__headline">Statistics &nbsp;•&nbsp; Research &nbsp;•&nbsp; Community Impact</p>
+        <p class="hero__desc">
+          Statistics student at UBC interested in statistical learning, machine learning, and
+          data-driven research. Passionate about applying quantitative methods to real-world
+          problems and creating impact through leadership and community engagement.
+        </p>
+        <div class="hero__actions">
+          <a href="#research" class="btn btn--primary">View Research</a>
+          <a href="#leadership" class="btn btn--ghost">Leadership &amp; Community Impact</a>
+          <a href="Firila_Najma_Resume.pdf" download class="btn btn--ghost">Download Resume</a>
         </div>
-        <div class="hero__visual">
-          <div class="hero__frame">
-             <div class="hero__avatar">
-                <img src="assets/firila_photo.jpg" alt="Firila Najma Wahidah" />
-            </div>
-            </div>
-            <div class="hero__badge">
-              <span class="hero__badge-dot"></span>
-              Open to opportunities
-            </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">Dean's List</span>
+            <span class="stat__label">2023W – 2025W</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num">BRIN</span>
+            <span class="stat__label">Research Intern</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num">4</span>
+            <span class="stat__label">Data Projects</span>
           </div>
         </div>
       </div>
-      <a href="#about" class="hero__scroll" aria-label="Scroll down">
-        <span>Scroll</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </a>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">About Me</span>
-          <h2 class="section__title">Profile</h2>
+      <div class="hero__visual">
+        <div class="hero__frame">
+          <div class="hero__avatar">
+            <img src="assets/firila_photo.jpg" alt="Portrait of Firila Najma Wahidah" width="320" height="380" fetchpriority="high" decoding="async" />
+          </div>
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Open to opportunities
+          </div>
         </div>
-        <div class="about__grid">
-          <div class="about__text">
-            <p class="about__lead">
-              Hi, I'm <strong>Firila</strong> — a Statistics student with a thematic 
-              concentration in Computer Science and a strong focus on data science,
-              analytics, machine learning, and applied statistical modeling.
+      </div>
+    </div>
+    <div class="container">
+      <div class="highlights">
+        <div class="highlight">
+          <span class="highlight__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5"/></svg>
+          </span>
+          <div>
+            <strong>Indonesia Maju Scholar</strong>
+            <span>National merit-based scholarship</span>
+          </div>
+        </div>
+        <div class="highlight">
+          <span class="highlight__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 7 7 7 7"/><path d="M18 9h1.5a2.5 2.5 0 000-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
+          </span>
+          <div>
+            <strong>1st Place · DataQuest</strong>
+            <span>Competitive data science</span>
+          </div>
+        </div>
+        <div class="highlight">
+          <span class="highlight__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+          </span>
+          <div>
+            <strong>Dean's List · 2023W–2025W</strong>
+            <span>University of British Columbia</span>
+          </div>
+        </div>
+        <div class="highlight">
+          <span class="highlight__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </span>
+          <div>
+            <strong>Campus &amp; Community Leader</strong>
+            <span>MSA · AWM · IDRF</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section class="section section--alt about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">01 · Statistics Student</span>
+        <h2 class="section__title" id="about-heading">Academic foundation &amp; <em>excellence</em></h2>
+        <p class="section__desc">Grounded in statistical theory and computational methods at one of Canada's leading universities.</p>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p class="about__lead">
+            Hi, I'm <strong>Firila</strong> — a Statistics student at the
+            <strong>University of British Columbia</strong> with a thematic concentration
+            in Computer Science, recognized on the <strong>Dean's List</strong> from 2023W through 2025W.
+          </p>
+          <p>
+            As an <strong>Indonesia Maju Scholarship</strong> recipient, I bring a global perspective
+            to quantitative research — combining statistical rigor with applied data science,
+            machine learning, and reproducible analysis to address complex, real-world questions.
+          </p>
+          <p>
+            Beyond coursework, I contribute to research at Indonesia's national science agency,
+            lead student organizations on campus, and volunteer with international development
+            organizations — building a portfolio that reflects both intellectual depth and
+            community commitment.
+          </p>
+          <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="about__link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            View GitHub Profile
+          </a>
+        </div>
+        <div class="about__timeline">
+          <div class="timeline__item">
+            <span class="timeline__year">Education</span>
+            <h3>B.Sc. Statistics · UBC</h3>
+            <p>Thematic concentration in Computer Science. Dean's List honoree (2023W–2025W). Indonesia Maju Scholarship recipient.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__year">Research</span>
+            <h3>BRIN Research Intern</h3>
+            <p>Research Intern at the National Research and Innovation Agency of Indonesia, contributing to applied statistical research and national science initiatives.</p>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__year">Focus</span>
+            <h3>Statistics · ML · Impact</h3>
+            <p>Predictive modeling, NLP, Monte Carlo simulation, time-series forecasting, and data-driven decision support for policy and research.</p>
+          </div>
+        </div>
+      </div>
+      <div class="skills-inline">
+        <h3 class="skills-inline__title">Technical expertise</h3>
+        <div class="skills__tags">
+          <span>Python</span><span>R</span><span>SQL</span><span>Machine Learning</span>
+          <span>Statistical Modeling</span><span>NLP</span><span>Time-Series</span>
+          <span>Monte Carlo</span><span>Tableau</span><span>Git</span><span>Reproducible Research</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section class="section research" id="research" aria-labelledby="research-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">02 · Researcher</span>
+        <h2 class="section__title" id="research-heading">Inquiry, analysis &amp; <em>contribution</em></h2>
+        <p class="section__desc">From national research labs to conference presentations — applying statistics to questions that matter.</p>
+      </div>
+      <div class="cards-grid cards-grid--2">
+        <article class="info-card">
+          <div class="info-card__meta">
+            <span class="info-card__tag">Internship</span>
+            <span class="info-card__date">BRIN · Indonesia</span>
+          </div>
+          <h3 class="info-card__title">Research Intern</h3>
+          <p class="info-card__org">National Research and Innovation Agency of Indonesia (BRIN)</p>
+          <p class="info-card__desc">
+            Contributed to applied research at Indonesia's premier national science agency,
+            supporting data-driven investigations and statistical analysis within a multidisciplinary
+            research environment focused on national innovation priorities.
+          </p>
+          <ul class="info-card__list">
+            <li>Applied statistical methods to research datasets</li>
+            <li>Supported reproducible analysis workflows</li>
+            <li>Collaborated within a national research institution</li>
+          </ul>
+        </article>
+        <article class="info-card">
+          <div class="info-card__meta">
+            <span class="info-card__tag">Conference</span>
+            <span class="info-card__date">Presenter</span>
+          </div>
+          <h3 class="info-card__title">Conference Presenter &amp; Contributor</h3>
+          <p class="info-card__org">Academic &amp; research forums</p>
+          <p class="info-card__desc">
+            Presented research findings and contributed to scholarly discussions,
+            communicating complex statistical results to academic and professional audiences
+            with clarity and rigor.
+          </p>
+          <ul class="info-card__list">
+            <li>Conference presentations on research topics</li>
+            <li>Collaborative research contributions</li>
+            <li>Technical communication to diverse audiences</li>
+          </ul>
+        </article>
+        <article class="info-card info-card--accent">
+          <div class="info-card__meta">
+            <span class="info-card__tag">Project</span>
+            <span class="info-card__date">Seismic Analysis</span>
+          </div>
+          <h3 class="info-card__title">Seismic Research Analysis</h3>
+          <p class="info-card__org">Statistical modeling · Earthquake parameters</p>
+          <p class="info-card__desc">
+            Analyzed seismic data from Türkiye to identify statistical relationships among
+            earthquake parameters — including magnitude and depth — and assessed the
+            transferability of observed patterns to the Pacific Northwest context.
+          </p>
+          <a href="https://github.com/firilanjm/seismic-research" target="_blank" rel="noopener" class="info-card__link">
+            View research repository →
+          </a>
+        </article>
+        <article class="info-card">
+          <div class="info-card__meta">
+            <span class="info-card__tag">Methods</span>
+            <span class="info-card__date">Core toolkit</span>
+          </div>
+          <h3 class="info-card__title">Research Methodology</h3>
+          <p class="info-card__org">Quantitative &amp; computational approaches</p>
+          <ul class="info-card__list info-card__list--grid">
+            <li>Hypothesis testing &amp; inference</li>
+            <li>Regression &amp; predictive modeling</li>
+            <li>Monte Carlo simulation</li>
+            <li>Time-series analysis</li>
+            <li>Data wrangling &amp; visualization</li>
+            <li>Reproducible research (R, Python)</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Science Projects -->
+  <section class="section section--alt projects" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section__header section__header--row">
+        <div>
+          <span class="section__tag">Technical Portfolio</span>
+          <h2 class="section__title" id="projects-heading">Data science &amp; <em>repositories</em></h2>
+          <p class="section__desc">
+            End-to-end data science projects with reproducible code — demonstrating applied
+            machine learning, analytics, and statistical modeling with measurable results.
+          </p>
+        </div>
+        <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
+          All repositories →
+        </a>
+      </div>
+
+      <div class="projects-toolbar">
+        <div class="projects-search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="search" id="projectSearch" placeholder="Search projects, technologies, results…" aria-label="Search projects" />
+        </div>
+        <div class="projects-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" class="projects-filter projects-filter--active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="projects-filter" data-filter="machine-learning" aria-pressed="false">Machine Learning</button>
+          <button type="button" class="projects-filter" data-filter="analytics" aria-pressed="false">Analytics</button>
+          <button type="button" class="projects-filter" data-filter="nlp" aria-pressed="false">NLP</button>
+          <button type="button" class="projects-filter" data-filter="time-series" aria-pressed="false">Time Series</button>
+        </div>
+      </div>
+
+      <p class="projects-count" id="projectCount" aria-live="polite">Showing 4 projects</p>
+
+      <div class="projects-showcase" id="projectsShowcase">
+
+        <article class="project-showcase" data-category="machine-learning" data-search="credit card fraud detection python scikit-learn xgboost lightgbm catboost machine learning roc-auc feature importance">
+          <div class="project-showcase__top">
+            <span class="project-showcase__category">Machine Learning</span>
+            <div class="project-showcase__actions">
+              <a href="https://github.com/firilanjm/credit-card-fraud-detection" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--github" aria-label="Credit Card Fraud Detection on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="notebooks/creditcard.html" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--demo">Demo</a>
+            </div>
+          </div>
+          <figure class="project-showcase__visual">
+            <img src="images/creditcard.png" alt="ROC curve and evaluation metrics from credit card fraud detection models" loading="lazy" width="640" height="360" />
+          </figure>
+          <h3 class="project-showcase__title">Credit Card Fraud Detection</h3>
+          <p class="project-showcase__desc">
+            Developed and compared multiple machine learning classifiers to identify fraudulent
+            credit card transactions, emphasizing model performance, interpretability, and
+            practical deployment considerations for highly imbalanced data.
+          </p>
+          <div class="project-showcase__section">
+            <h4>Technologies Used</h4>
+            <div class="project-showcase__tags">
+              <span>Python</span><span>scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>CatBoost</span>
+            </div>
+          </div>
+          <div class="project-showcase__section">
+            <h4>Key Results</h4>
+            <ul class="project-showcase__results">
+              <li>Built multiple machine learning models for fraud detection</li>
+              <li>Best model achieved ROC-AUC of <strong>0.980</strong></li>
+              <li>Performed feature importance analysis</li>
+            </ul>
+          </div>
+          <div class="project-showcase__footer">
+            <a href="https://github.com/firilanjm/credit-card-fraud-detection" target="_blank" rel="noopener" class="project-showcase__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Repository
+            </a>
+            <a href="notebooks/creditcard.html" target="_blank" rel="noopener" class="project-showcase__link project-showcase__link--muted">View Demo →</a>
+          </div>
+        </article>
+
+        <article class="project-showcase" data-category="analytics" data-search="e-commerce data analytics python sql tableau uk transactions revenue customer behavior dashboards business insights">
+          <div class="project-showcase__top">
+            <span class="project-showcase__category">Analytics</span>
+            <div class="project-showcase__actions">
+              <a href="https://github.com/firilanjm/ecommerce-analysis" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--github" aria-label="E-Commerce Data Analytics on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="notebooks/ecommerce_analytics.html" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--demo">Demo</a>
+            </div>
+          </div>
+          <figure class="project-showcase__visual">
+            <img src="images/ecommerce.png" alt="E-commerce customer analytics dashboard showing revenue and behavior trends" loading="lazy" width="640" height="360" />
+          </figure>
+          <h3 class="project-showcase__title">E-Commerce Data Analytics</h3>
+          <p class="project-showcase__desc">
+            Conducted large-scale exploratory and business analytics on e-commerce transaction
+            data to uncover revenue patterns, customer segments, and actionable insights
+            for marketing and inventory strategy.
+          </p>
+          <div class="project-showcase__section">
+            <h4>Technologies Used</h4>
+            <div class="project-showcase__tags">
+              <span>Python</span><span>SQL</span><span>Tableau</span>
+            </div>
+          </div>
+          <div class="project-showcase__section">
+            <h4>Key Results</h4>
+            <ul class="project-showcase__results">
+              <li>Analyzed approximately <strong>250,000</strong> UK transactions</li>
+              <li>Investigated revenue trends and customer behavior</li>
+              <li>Built dashboards for business insights</li>
+            </ul>
+          </div>
+          <div class="project-showcase__footer">
+            <a href="https://github.com/firilanjm/ecommerce-analysis" target="_blank" rel="noopener" class="project-showcase__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Repository
+            </a>
+            <a href="notebooks/ecommerce_analytics.html" target="_blank" rel="noopener" class="project-showcase__link project-showcase__link--muted">View Demo →</a>
+          </div>
+        </article>
+
+        <article class="project-showcase" data-category="nlp" data-search="twitter sentiment analysis python nlp logistic regression social media text classification visualization">
+          <div class="project-showcase__top">
+            <span class="project-showcase__category">NLP</span>
+            <div class="project-showcase__actions">
+              <a href="https://github.com/firilanjm/twitter-sentiment-analysis" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--github" aria-label="Twitter Sentiment Analysis on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="notebooks/twitter_sentiment.html" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--demo">Demo</a>
+            </div>
+          </div>
+          <figure class="project-showcase__visual">
+            <img src="images/nlp.png" alt="Twitter sentiment analysis visualization showing sentiment classification results" loading="lazy" width="640" height="360" />
+          </figure>
+          <h3 class="project-showcase__title">Twitter Sentiment Analysis</h3>
+          <p class="project-showcase__desc">
+            Applied natural language processing techniques to classify public sentiment from
+            social media text data, transforming unstructured tweets into structured insights
+            for brand and audience analysis.
+          </p>
+          <div class="project-showcase__section">
+            <h4>Technologies Used</h4>
+            <div class="project-showcase__tags">
+              <span>Python</span><span>NLP</span><span>Logistic Regression</span>
+            </div>
+          </div>
+          <div class="project-showcase__section">
+            <h4>Key Results</h4>
+            <ul class="project-showcase__results">
+              <li>Processed social media text data</li>
+              <li>Built sentiment classification models</li>
+              <li>Visualized sentiment trends</li>
+            </ul>
+          </div>
+          <div class="project-showcase__footer">
+            <a href="https://github.com/firilanjm/twitter-sentiment-analysis" target="_blank" rel="noopener" class="project-showcase__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Repository
+            </a>
+            <a href="notebooks/twitter_sentiment.html" target="_blank" rel="noopener" class="project-showcase__link project-showcase__link--muted">View Demo →</a>
+          </div>
+        </article>
+
+        <article class="project-showcase project-showcase--featured" data-category="time-series" data-search="vancouver business analytics dataquest competition python time series machine learning 1st place predictive models recommendations">
+          <div class="project-showcase__top">
+            <span class="project-showcase__category">Time Series · 1st Place</span>
+            <div class="project-showcase__actions">
+              <a href="https://github.com/ShawnGabriel/dataquest-svm" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--github" aria-label="Vancouver Business Analytics on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="notebooks/business.html" target="_blank" rel="noopener" class="project-showcase__btn project-showcase__btn--demo">Demo</a>
+            </div>
+          </div>
+          <figure class="project-showcase__visual">
+            <img src="images/business.png" alt="Vancouver business analytics forecasting charts from DataQuest competition project" loading="lazy" width="640" height="360" />
+          </figure>
+          <h3 class="project-showcase__title">Vancouver Business Analytics <span class="project-showcase__award">DataQuest Competition</span></h3>
+          <p class="project-showcase__desc">
+            Competed in the UBC DataQuest Competition with a team project analyzing Vancouver
+            business trends — developing predictive models and data-driven recommendations
+            that earned first place among participating teams.
+          </p>
+          <div class="project-showcase__section">
+            <h4>Technologies Used</h4>
+            <div class="project-showcase__tags">
+              <span>Python</span><span>Time Series Analysis</span><span>Machine Learning</span>
+            </div>
+          </div>
+          <div class="project-showcase__section">
+            <h4>Key Results</h4>
+            <ul class="project-showcase__results">
+              <li>Won <strong>1st Place</strong> in the UBC DataQuest Competition</li>
+              <li>Analyzed Vancouver business trends</li>
+              <li>Developed predictive models and recommendations</li>
+            </ul>
+          </div>
+          <div class="project-showcase__footer">
+            <a href="https://github.com/ShawnGabriel/dataquest-svm" target="_blank" rel="noopener" class="project-showcase__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View Repository
+            </a>
+            <a href="notebooks/business.html" target="_blank" rel="noopener" class="project-showcase__link project-showcase__link--muted">View Demo →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="projects-empty" id="projectsEmpty" hidden>No projects match your search. Try a different keyword or filter.</p>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="section leadership" id="leadership" aria-labelledby="leadership-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">03 · Leader</span>
+        <h2 class="section__title" id="leadership-heading">Campus leadership &amp; <em>impact</em></h2>
+        <p class="section__desc">
+          Building community through strategic communication, collaborative teamwork, and
+          inclusive design — translating leadership into measurable engagement and lasting impact.
+        </p>
+      </div>
+
+      <div class="leadership-skills">
+        <span class="leadership-skills__label">Core strengths</span>
+        <div class="leadership-skills__tags">
+          <span>Impact-driven leadership</span>
+          <span>Team collaboration</span>
+          <span>Strategic communication</span>
+          <span>Community engagement</span>
+          <span>Creative direction</span>
+        </div>
+      </div>
+
+      <div class="leadership-timeline">
+
+        <!-- MSA -->
+        <article class="leadership-entry">
+          <div class="leadership-entry__marker" aria-hidden="true">
+            <span class="leadership-entry__num">01</span>
+            <span class="leadership-entry__line"></span>
+          </div>
+          <div class="leadership-entry__card">
+            <div class="leadership-entry__header">
+              <div>
+                <span class="leadership-entry__org">Muslim Students Association (MSA) · UBC</span>
+                <h3 class="leadership-entry__title">Marketing Director</h3>
+              </div>
+              <span class="leadership-entry__badge">Student Organization</span>
+            </div>
+            <p class="leadership-entry__intro">
+              Led marketing and outreach for one of UBC's largest faith-based student organizations —
+              strengthening community connections through coordinated campaigns, digital presence,
+              and collaborative event promotion across campus.
             </p>
-            <p>
-              I specialize in designing end-to-end data pipelines, predictive models, and
-              actionable insights, and I have experience in machine learning, natural language
-              processing (NLP), Monte Carlo simulations, time-series forecasting, and data
-              visualization.
+            <div class="leadership-entry__grid">
+              <div class="leadership-entry__details">
+                <h4 class="leadership-entry__subtitle">Responsibilities</h4>
+                <ul class="leadership-entry__list">
+                  <li>Event promotion</li>
+                  <li>Social media communication</li>
+                  <li>Community engagement</li>
+                  <li>Team collaboration</li>
+                </ul>
+                <h4 class="leadership-entry__subtitle">Impact &amp; skills developed</h4>
+                <ul class="leadership-entry__impact">
+                  <li>Coordinated cross-team campaigns that increased event visibility and attendance</li>
+                  <li>Strengthened community belonging through inclusive, consistent messaging</li>
+                  <li>Built communication workflows that aligned marketing with organizational goals</li>
+                </ul>
+                <div class="leadership-entry__skills">
+                  <span>Communication</span>
+                  <span>Teamwork</span>
+                  <span>Event Marketing</span>
+                  <span>Community Building</span>
+                </div>
+              </div>
+              <div class="leadership-entry__media">
+                <h4 class="leadership-entry__subtitle">Gallery</h4>
+                <div class="media-gallery">
+                  <figure class="media-figure media-figure--photo">
+                    <img src="images/msa/msa-team.jpg" alt="MSA at UBC marketing team at a campus community event" loading="lazy" width="800" height="600" />
+                  </figure>
+                  <div class="media-gallery__row">
+                    <figure class="media-figure media-figure--poster">
+                      <img src="images/msa/MSA%20Template.png" alt="MSA event promotional template designed for campus outreach" loading="lazy" width="600" height="800" />
+                    </figure>
+                    <figure class="media-figure media-figure--poster">
+                      <img src="images/msa/MSA%20GREEN%20TEMPLATE%20(10).png" alt="MSA green-themed event marketing poster" loading="lazy" width="600" height="800" />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- AWM -->
+        <article class="leadership-entry">
+          <div class="leadership-entry__marker" aria-hidden="true">
+            <span class="leadership-entry__num">02</span>
+            <span class="leadership-entry__line"></span>
+          </div>
+          <div class="leadership-entry__card">
+            <div class="leadership-entry__header">
+              <div>
+                <span class="leadership-entry__org">Association for Women in Mathematics (AWM) · UBC</span>
+                <h3 class="leadership-entry__title">UI/UX Designer</h3>
+              </div>
+              <span class="leadership-entry__badge">Women in STEM</span>
+            </div>
+            <p class="leadership-entry__intro">
+              Designed digital and print experiences that advance AWM UBC's mission to support
+              women in mathematics — combining visual design with purposeful communication to
+              elevate STEM initiatives and foster an inclusive academic community.
             </p>
-            <p>
-              I am passionate about transforming complex data into clear, data-driven stories
-              to support decision-making, policy development, and real-world problem solving.
-            </p>
-            <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="about__link">
+            <div class="leadership-entry__grid">
+              <div class="leadership-entry__details">
+                <h4 class="leadership-entry__subtitle">Responsibilities</h4>
+                <ul class="leadership-entry__list">
+                  <li>Website support</li>
+                  <li>Design materials</li>
+                  <li>Event support</li>
+                  <li>Women in STEM initiatives</li>
+                </ul>
+                <h4 class="leadership-entry__subtitle">Impact &amp; skills developed</h4>
+                <ul class="leadership-entry__impact">
+                  <li>Improved accessibility and clarity of club resources through thoughtful UI/UX design</li>
+                  <li>Created visual materials that amplified women-in-STEM visibility on campus</li>
+                  <li>Collaborated with event teams to deliver cohesive branding across initiatives</li>
+                </ul>
+                <div class="leadership-entry__skills">
+                  <span>UI/UX Design</span>
+                  <span>Visual Communication</span>
+                  <span>Teamwork</span>
+                  <span>STEM Advocacy</span>
+                </div>
+              </div>
+              <div class="leadership-entry__media">
+                <h4 class="leadership-entry__subtitle">Gallery</h4>
+                <div class="media-gallery">
+                  <figure class="media-figure media-figure--photo">
+                    <img src="images/awm/awm-linkedin.png" alt="AWM at UBC LinkedIn banner and social media design" loading="lazy" width="800" height="600" />
+                  </figure>
+                  <div class="media-gallery__row">
+                    <figure class="media-figure media-figure--poster">
+                      <img src="images/awm/awm-mainpage.PNG" alt="AWM at UBC website main page UI design" loading="lazy" width="600" height="800" />
+                    </figure>
+                    <figure class="media-figure media-figure--poster">
+                      <img src="images/awm/awm-secondpage.PNG" alt="AWM at UBC website secondary page UI design" loading="lazy" width="600" height="800" />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Impact -->
+  <section class="section section--alt community" id="community" aria-labelledby="community-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">04 · Community Contributor</span>
+        <h2 class="section__title" id="community-heading">Service, collaboration &amp; <em>contribution</em></h2>
+        <p class="section__desc">
+          Volunteering with organizations dedicated to international development, humanitarian relief,
+          and youth empowerment — turning compassion into action through meaningful community engagement.
+        </p>
+      </div>
+
+      <div class="community-values">
+        <span class="community-values__label">Guiding principles</span>
+        <div class="community-values__tags">
+          <span>Service to others</span>
+          <span>Social contribution</span>
+          <span>Cross-cultural collaboration</span>
+          <span>Community empowerment</span>
+          <span>Sustainable impact</span>
+        </div>
+      </div>
+
+      <div class="community-impact">
+
+        <!-- IDRF -->
+        <article class="community-entry">
+          <div class="community-entry__banner">
+            <div class="community-entry__banner-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="community-entry__banner-text">
+              <span class="community-entry__label">Organization</span>
+              <h3 class="community-entry__org">International Development and Relief Foundation (IDRF)</h3>
+            </div>
+            <span class="community-entry__badge">Humanitarian &amp; Development</span>
+          </div>
+
+          <div class="community-entry__body community-entry__body--idrf">
+            <div class="community-entry__content">
+              <div class="community-detail">
+                <h4 class="community-detail__title">Role</h4>
+                <p class="community-detail__text community-detail__text--highlight">Media Assistant</p>
+                <p class="community-detail__text">
+                  Assisted with communications, outreach initiatives, and community-focused activities
+                  while collaborating with volunteers from diverse backgrounds at the International
+                  Development and Relief Foundation (IDRF).
+                </p>
+              </div>
+
+              <div class="community-detail">
+                <h4 class="community-detail__title">Activities</h4>
+                <ul class="community-detail__list">
+                  <li>Supported communications and outreach for development initiatives</li>
+                  <li>Assisted with community-focused volunteer activities</li>
+                  <li>Collaborated with volunteers from diverse cultural backgrounds</li>
+                  <li>Contributed to awareness efforts for humanitarian and relief programs</li>
+                </ul>
+              </div>
+
+              <div class="community-detail">
+                <h4 class="community-detail__title">Skills developed</h4>
+                <ul class="community-detail__impact">
+                  <li>Strengthened cross-cultural communication through global service work</li>
+                  <li>Built teamwork skills coordinating with diverse volunteer groups</li>
+                  <li>Developed media and outreach skills supporting community initiatives</li>
+                  <li>Practiced collaborative problem-solving in community-focused settings</li>
+                </ul>
+                <div class="community-detail__skills">
+                  <span>Communications</span>
+                  <span>Outreach</span>
+                  <span>Cross-cultural collaboration</span>
+                  <span>Community engagement</span>
+                </div>
+              </div>
+            </div>
+
+            <aside class="info-panel info-panel--coming-soon" aria-labelledby="idrf-panel-title">
+              <div class="info-panel__header">
+                <span class="info-panel__label">Role</span>
+                <span class="info-panel__badge">Documentation Coming Soon</span>
+              </div>
+              <h4 class="info-panel__title" id="idrf-panel-title">Media Assistant</h4>
+              <p class="info-panel__org">International Development and Relief Foundation (IDRF)</p>
+              <p class="info-panel__desc">
+                Assisted with communications, outreach initiatives, and community-focused activities
+                while collaborating with volunteers from diverse backgrounds.
+              </p>
+              <p class="info-panel__note">
+                Certificates and supporting materials will be added after they become available.
+              </p>
+            </aside>
+          </div>
+        </article>
+
+        <!-- Semangat Muda -->
+        <article class="community-entry">
+          <div class="community-entry__banner">
+            <div class="community-entry__banner-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="community-entry__banner-text">
+              <span class="community-entry__label">Organization</span>
+              <h3 class="community-entry__org">Semangat Muda</h3>
+            </div>
+            <span class="community-entry__badge">Youth Empowerment</span>
+          </div>
+
+          <div class="community-entry__body">
+            <div class="community-entry__content">
+              <div class="community-detail">
+                <h4 class="community-detail__title">Role</h4>
+                <p class="community-detail__text community-detail__text--highlight">Volunteer</p>
+                <p class="community-detail__text">
+                  Engaging with Semangat Muda's youth-focused programs to empower young people through
+                  education, mentorship, and civic engagement — fostering the next generation of
+                  community leaders and changemakers.
+                </p>
+              </div>
+
+              <div class="community-detail">
+                <h4 class="community-detail__title">Activities</h4>
+                <ul class="community-detail__list">
+                  <li>Supported youth education and mentorship programs</li>
+                  <li>Participated in community events and civic engagement initiatives</li>
+                  <li>Collaborated with fellow volunteers on social impact projects</li>
+                  <li>Contributed to programs promoting youth leadership and development</li>
+                </ul>
+              </div>
+
+              <div class="community-detail">
+                <h4 class="community-detail__title">Skills developed</h4>
+                <ul class="community-detail__impact">
+                  <li>Enhanced mentoring and interpersonal communication with youth participants</li>
+                  <li>Strengthened teamwork through collaborative community project delivery</li>
+                  <li>Built organizational skills supporting event logistics and programming</li>
+                  <li>Deepened commitment to social contribution and local community building</li>
+                </ul>
+                <div class="community-detail__skills">
+                  <span>Youth mentorship</span>
+                  <span>Team collaboration</span>
+                  <span>Event support</span>
+                  <span>Social impact</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="community-entry__media">
+              <h4 class="community-detail__title">Photos</h4>
+              <div class="media-gallery">
+                <figure class="media-figure media-figure--event">
+                  <img src="images/youthid/youthid-event-1.jpg" alt="Semangat Muda youth community engagement event" loading="lazy" width="800" height="500" />
+                </figure>
+                <figure class="media-figure media-figure--event">
+                  <img src="images/youthid/youthid-event-2.jpg" alt="Semangat Muda volunteer activity with youth participants" loading="lazy" width="800" height="500" />
+                </figure>
+                <aside class="info-panel info-panel--coming-soon info-panel--compact" aria-label="Semangat Muda certificate documentation">
+                  <span class="info-panel__badge">Documentation Coming Soon</span>
+                  <p class="info-panel__note">Certificates and supporting materials will be added after they become available.</p>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <blockquote class="impact-quote">
+        <p>"True leadership extends beyond campus walls — it is measured by the positive difference we make in the lives of others through service, collaboration, and sustained social contribution."</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Awards & Recognition -->
+  <section class="section awards" id="awards" aria-labelledby="awards-heading">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">Recognition</span>
+        <h2 class="section__title" id="awards-heading">Honors &amp; <em>achievements</em></h2>
+        <p class="section__desc">
+          Academic distinction, national scholarships, and competitive excellence —
+          recognition earned through sustained effort and intellectual curiosity.
+        </p>
+      </div>
+
+      <div class="awards__grid">
+
+        <article class="award-card award-card--featured">
+          <div class="award-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5"/></svg>
+          </div>
+          <span class="award-card__badge">Academic Excellence</span>
+          <span class="award-card__year">2023W – 2025W</span>
+          <h3 class="award-card__title">Dean's List</h3>
+          <p class="award-card__desc">
+            Recognized on the Dean's List at the University of British Columbia for sustained
+            academic excellence across multiple terms, reflecting consistent high performance
+            in Statistics coursework.
+          </p>
+        </article>
+
+        <article class="award-card">
+          <div class="award-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="award-card__badge">National Scholarship</span>
+          <span class="award-card__year">Merit Award</span>
+          <h3 class="award-card__title">Indonesia Maju Scholarship</h3>
+          <p class="award-card__desc">
+            Recipient of a prestigious national merit-based scholarship supporting outstanding
+            Indonesian students pursuing higher education abroad — awarded for academic achievement
+            and leadership potential.
+          </p>
+        </article>
+
+        <article class="award-card">
+          <div class="award-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 7 7 7 7"/><path d="M18 9h1.5a2.5 2.5 0 000-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
+          </div>
+          <span class="award-card__badge">Data Science</span>
+          <span class="award-card__year">1st Place</span>
+          <h3 class="award-card__title">DataQuest Competition</h3>
+          <p class="award-card__desc">
+            Awarded first place for developing predictive business forecasting models in a
+            competitive data science challenge — contributing time-series modeling, data cleaning,
+            and visualization as part of a winning team.
+          </p>
+        </article>
+
+        <article class="award-card">
+          <div class="award-card__icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <span class="award-card__badge">Mathematics</span>
+          <span class="award-card__year">Competition</span>
+          <h3 class="award-card__title">Mathematics Competition Awards</h3>
+          <p class="award-card__desc">
+            Earned recognition in mathematics competitions demonstrating strong problem-solving
+            ability, analytical reasoning, and quantitative aptitude — foundational strengths
+            that continue to inform my work in statistics and data science.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section class="section section--alt resume" id="resume" aria-labelledby="resume-heading">
+    <div class="container">
+      <div class="resume__inner">
+        <div class="resume__info">
+          <span class="section__tag">Curriculum Vitae</span>
+          <h2 class="section__title" id="resume-heading">Resume &amp; credentials</h2>
+          <p>
+            A comprehensive overview of my academic background, research experience, leadership roles,
+            technical projects, and community involvement — prepared for graduate admissions
+            (including Oxford and UCL), scholarship applications, fellowships, and professional opportunities.
+          </p>
+          <div class="resume__actions">
+            <a href="Firila_Najma_Resume.pdf" target="_blank" rel="noopener" class="btn btn--primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download PDF
+            </a>
+            <a href="Firila_Najma_Resume.pdf" target="_blank" rel="noopener" class="btn btn--ghost">View in browser</a>
+          </div>
+          <ul class="resume__highlights">
+            <li>Statistics · UBC · Dean's List</li>
+            <li>BRIN Research Internship</li>
+            <li>MSA &amp; AWM Leadership</li>
+            <li>4 data science repositories</li>
+          </ul>
+        </div>
+        <div class="resume__preview">
+          <div class="resume__preview-frame">
+            <object data="Firila_Najma_Resume.pdf" type="application/pdf" class="resume__pdf">
+              <p>Your browser does not support embedded PDFs.
+                <a href="Firila_Najma_Resume.pdf">Download the resume</a> instead.</p>
+            </object>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info">
+          <span class="section__tag">Contact</span>
+          <h2 class="section__title" id="contact-heading">Let's connect</h2>
+          <p>
+            Interested in graduate study, research supervision, scholarships, fellowships, or collaboration?
+            I welcome enquiries from admissions committees, faculty, and professional networks.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:firilanjm@gmail.com" class="contact__link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+              firilanjm@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/firilanjm/" target="_blank" rel="noopener" class="contact__link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="contact__link">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              View GitHub Profile
+              GitHub
             </a>
           </div>
-          <div class="about__timeline">
-            <div class="timeline__item">
-              <span class="timeline__year">Present</span>
-              <h3>Statistics Student</h3>
-              <p>Building expertise in data science, ML, and applied statistical modeling through coursework and projects.</p>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">Focus Areas</span>
-              <h3>ML · NLP · Forecasting</h3>
-              <p>Predictive modeling, NLP pipelines, Monte Carlo simulations, and time-series analysis.</p>
-            </div>
-            <div class="timeline__item">
-              <span class="timeline__year">Mission</span>
-              <h3>Data-Driven Impact</h3>
-              <p>Turning complex datasets into insights that support decisions, policy, and real-world solutions.</p>
-            </div>
-          </div>
         </div>
+        <form class="contact__form" id="contactForm" action="https://formsubmit.co/ajax/firilanjm@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New portfolio message from Firila Najma Wahidah" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <p class="form__status" id="formStatus" role="status" aria-live="polite" hidden></p>
+          <div class="form__group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required />
+          </div>
+          <div class="form__group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share your research interest, opportunity, or question..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="formSubmitBtn">Send Message</button>
+        </form>
       </div>
-    </section>
-
-    <section class="section projects" id="projects">
-      <div class="container">
-        <div class="section__header section__header--row">
-          <div>
-            <span class="section__tag">Work</span>
-            <h2 class="section__title">ML &amp; Data Projects</h2>
-          </div>
-          <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">
-            All repositories →
-          </a>
-        </div>
-        <div class="projects__grid">
-
-          <a href="https://github.com/firilanjm/monte-carlo-mbg" target="_blank" rel="noopener" class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__name">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
-                Monte Carlo MBG Fund
-              </span>
-            </div>
-            <p class="project-card__desc">Simulated the sustainability of the Indonesian MBG Fund using Monte Carlo methods, quantifying the probability of funding a portion of the program over 10 years under uncertain yields and inflation.</p>
-            <div class="project-card__tags">
-              <span>R</span><span>Monte Carlo</span><span>Simulation</span><span>Patchwork</span>
-            </div>
-            <div class="project-card__footer">
-              <span class="project-card__link">View on GitHub →</span>
-            </div>
-          </a>
-
-          <a href="https://github.com/firilanjm/credit-card-fraud-detection" target="_blank" rel="noopener" class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__name">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
-                Credit Card Fraud Detection
-              </span>
-            </div>
-            <p class="project-card__desc">Built a machine learning model to detect fraudulent transactions with high precision and recall, identifying key transaction patterns.</p>
-            <div class="project-card__tags">
-              <span>Random Forest</span><span>XGBoost</span><span>CatBoost</span><span>LightGBM</span>
-            </div>
-            <div class="project-card__footer">
-              <span class="project-card__link">View on GitHub →</span>
-            </div>
-          </a>
-
-          <a href="https://github.com/firilanjm/twitter-sentiment-analysis" target="_blank" rel="noopener" class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__name">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
-                NLP Twitter Sentiment Analysis
-              </span>
-            </div>
-            <p class="project-card__desc">Analyzes public sentiment toward multiple brands and games using Twitter data, applying NLP techniques for text classification.</p>
-            <div class="project-card__tags">
-              <span>Python</span><span>NLP</span><span>TF-IDF</span><span>Logistic Regression</span>
-            </div>
-            <div class="project-card__footer">
-              <span class="project-card__link">View on GitHub →</span>
-            </div>
-          </a>
-
-          <a href="https://github.com/ShawnGabriel/dataquest-svm" target="_blank" rel="noopener" class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__name">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
-                Business Forecasting in Vancouver
-              </span>
-            </div>
-            <p class="project-card__desc">Developed predictive models for business performance forecasting; awarded 1st place in the Dataquest Competition. Contributed to time-series modeling, data cleaning, and visualization.</p>
-            <div class="project-card__tags">
-              <span>Pandas</span><span>Time Series</span><span>Forecasting</span><span>Team Project</span>
-            </div>
-            <div class="project-card__footer">
-              <span class="project-card__link">View on GitHub →</span>
-            </div>
-          </a>
-
-          <a href="https://github.com/firilanjm/ecommerce-analysis" target="_blank" rel="noopener" class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__name">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
-                E-commerce Customer Analysis
-              </span>
-            </div>
-            <p class="project-card__desc">Explored customer behavior and purchasing patterns, generating actionable insights for marketing and inventory management.</p>
-            <div class="project-card__tags">
-              <span>SQL</span><span>Tableau</span><span>Python</span><span>Data Analysis</span>
-            </div>
-            <div class="project-card__footer">
-              <span class="project-card__link">View on GitHub →</span>
-            </div>
-          </a>
-
-          <a href="https://github.com/firilanjm/seismic-research" target="_blank" rel="noopener" class="project-card">
-            <div class="project-card__header">
-              <span class="project-card__name">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.86.86 0 01-1.004.053A.75.75 0 003 11.25V2.5zm2.5-1a1 1 0 00-1 1v8.5h8.75V1.5H4.5z"/></svg>
-                Seismic Research Analysis
-              </span>
-            </div>
-            <p class="project-card__desc">Analyzed seismic data from Türkiye to identify statistical relationships among earthquake parameters, including magnitude and depth, and assess transferability of patterns to Pacific Northwest.</p>
-            <div class="project-card__tags">
-              <span>R</span><span>Data Wrangling</span><span>Statistical Modeling</span>
-            </div>
-            <div class="project-card__footer">
-              <span class="project-card__link">View on GitHub →</span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section skills" id="skills">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__tag">Expertise</span>
-          <h2 class="section__title">Skills &amp; Tools</h2>
-        </div>
-        <div class="skills__grid">
-          <div class="skill-group">
-            <h3 class="skill-group__title">Machine Learning</h3>
-            <ul class="skill-list">
-              <li><span>Predictive Modeling</span><div class="skill-bar"><div style="width:90%"></div></div></li>
-              <li><span>Scikit-learn / XGBoost</span><div class="skill-bar"><div style="width:88%"></div></div></li>
-              <li><span>NLP &amp; Text Analytics</span><div class="skill-bar"><div style="width:85%"></div></div></li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group__title">Statistics &amp; Analytics</h3>
-            <ul class="skill-list">
-              <li><span>Statistical Modeling</span><div class="skill-bar"><div style="width:92%"></div></div></li>
-              <li><span>Monte Carlo Simulation</span><div class="skill-bar"><div style="width:86%"></div></div></li>
-              <li><span>Time-Series Forecasting</span><div class="skill-bar"><div style="width:88%"></div></div></li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3 class="skill-group__title">Data Engineering &amp; Viz</h3>
-            <ul class="skill-list">
-              <li><span>Python / Pandas</span><div class="skill-bar"><div style="width:93%"></div></div></li>
-              <li><span>Data Pipelines / SQL</span><div class="skill-bar"><div style="width:85%"></div></div></li>
-              <li><span>Matplotlib / Plotly</span><div class="skill-bar"><div style="width:90%"></div></div></li>
-            </ul>
-          </div>
-        </div>
-        <div class="skills__tags">
-          <span>Statistics</span><span>Data Science</span><span>Jupyter</span><span>R</span>
-          <span>Feature Engineering</span><span>A/B Testing</span><span>Git</span><span>Reproducible Research</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="contact__inner">
-          <div class="contact__info">
-            <span class="section__tag">Contact</span>
-            <h2 class="section__title">Let's work<br /><em>together</em></h2>
-            <p>Interested in collaborating on data science, ML, or analytics projects? I'd love to connect.</p>
-            <div class="contact__links">
-              <a href="mailto:firilanjm@gmail.com" class="contact__link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-                firilanjm@gmail.com
-              </a>
-              <a href="https://www.linkedin.com/in/firilanjm/" target="_blank" rel="noopener" class="contact__link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                LinkedIn
-              </a>
-              <a href="https://github.com/firilanjm" target="_blank" rel="noopener" class="contact__link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub
-              </a>
-            </div>
-          </div>
-          <form class="contact__form" id="contactForm">
-            <div class="form__group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
-            </div>
-            <div class="form__group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@email.com" required />
-            </div>
-            <div class="form__group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Describe your data challenge or ML use case..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2026 Firila Najma Wahidah. Crafted with care.</p>
+      <div class="footer__brand">
+        <p class="footer__copy">&copy; 2026 Firila Najma Wahidah</p>
+        <p class="footer__tagline">Statistics • Research • Community Impact</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#community">Community</a>
+        <a href="#awards">Awards</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <div class="footer__social">
         <a href="https://github.com/firilanjm" target="_blank" rel="noopener" aria-label="GitHub">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3 .405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -353,6 +1010,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
