@@ -146,6 +146,7 @@ em { font-style: italic; color: var(--rose); }
 
 .hero {
   padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 .hero > .container:last-of-type { margin-top: 2rem; }
 .hero__bg {
