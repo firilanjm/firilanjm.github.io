@@ -157,8 +157,11 @@ em { font-style: italic; color: var(--rose); }
   pointer-events: none;
 }
 .hero__inner {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
-  align-items: center; position: relative;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  align-items: center;
+  gap: 5rem;
+  min-height: 650px;
 }
 .hero__title {
   font-family: var(--font-serif); font-size: clamp(2.25rem, 4.5vw, 3.5rem);
