@@ -145,8 +145,7 @@ em { font-style: italic; color: var(--rose); }
 }
 
 .hero {
-  position: relative; min-height: 100vh; display: flex; flex-direction: column;
-  justify-content: center; padding: calc(var(--header-h) + 2rem) 0 3rem; overflow: hidden;
+  padding-top: 2rem;
 }
 .hero > .container:last-of-type { margin-top: 2rem; }
 .hero__bg {
@@ -159,9 +158,9 @@ em { font-style: italic; color: var(--rose); }
 .hero__inner {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
-  align-items: center;
+  align-items: start;
   gap: 5rem;
-  min-height: 650px;
+  padding-top: 3rem;
 }
 .hero__title {
   font-family: var(--font-serif); font-size: clamp(2.25rem, 4.5vw, 3.5rem);
@@ -188,7 +187,8 @@ em { font-style: italic; color: var(--rose); }
 .hero__visual {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 1rem;
 }
 
 .hero__frame {
