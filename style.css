@@ -76,7 +76,11 @@ em { font-style: italic; color: var(--rose); }
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
-  .hero__scroll svg { animation: none; }
+  .hero__scroll svg { animation: 
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%); }
   .hero__badge-dot { animation: none; }
 }
 
