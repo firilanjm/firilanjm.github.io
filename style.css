@@ -989,6 +989,26 @@ em { font-style: italic; color: var(--rose); }
   .journey__step { min-width: calc(50% - 0.5rem); }
 }
 
+@media (max-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    min-height: auto;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__visual {
+    justify-content: flex-start;
+  }
+
+  .hero__frame {
+    width: min(260px, 75%);
+  }
+}
+
 @media (max-width: 900px) {
   .hero__inner, .about__grid, .contact__inner, .resume__inner { grid-template-columns: 1fr; gap: 3rem; }
   .hero__visual { order: -1; }
